@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       packageVersion:
-        description: "NPM Version of the release (@dcl/career-quest-site[C-site)"
+        description: "NPM Version of the release (@dcl/career-quest-site)"
         required: true
         default: ""
       deploymentEnvironment:
@@ -36,11 +36,11 @@ jobs:
           sha: ${{ github.sha }}
 
           # CDN information
-          packageName: "@dcl/career-quest-site[C-site"
+          packageName: "@dcl/career-quest-site"
           packageVersion: ${{ github.event.inputs.packageVersion }}
 
           # Rollout information
-          deploymentPath: "career-quest-site[C"
+          deploymentPath: "career-quest"
           deploymentEnvironment: ${{ github.event.inputs.deploymentEnvironment }}
           deploymentName: "_site"
           percentage: ${{ github.event.inputs.rolloutPercentage }}
