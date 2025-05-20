@@ -1,5 +1,5 @@
 {
-  "name": "@dcl/career-quest-site[C-site",
+  "name": "@dcl/career-quest-site",
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
@@ -14,7 +14,7 @@
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/decentraland/career-quest-site[C.git"
+    "url": "git+ssh://git@github.com/decentraland/career-quest.git"
   },
   "homepage": ""
 }

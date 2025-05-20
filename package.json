@@ -1,5 +1,5 @@
 {
-  "name": "@dcl/career-quest-site[C-site",
+  "name": "@dcl/career-quest-site",
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
@@ -20,14 +20,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/decentraland/career-quest-site[C.git"
+    "url": "git+ssh://git@github.com/decentraland/career-quest.git"
   },
   "author": "Decentraland",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/decentraland/career-quest-site[C/issues"
+    "url": "https://github.com/decentraland/career-quest/issues"
   },
-  "homepage": "https://github.com/decentraland/career-quest-site[C#readme",
+  "homepage": "https://github.com/decentraland/career-quest#readme",
   "engines": {
     "node": "20.*",
     "npm": "8.* || 9.*"
