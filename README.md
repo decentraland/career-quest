@@ -1,4 +1,4 @@
-# career-quest-site[C
+# Career Quest
 
 ![Decentraland Cover](https://decentraland.org/og.jpg)
 
