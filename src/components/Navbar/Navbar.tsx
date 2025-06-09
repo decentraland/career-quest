@@ -1,4 +1,5 @@
-import { FaDiscord, FaInstagram, FaXTwitter } from "react-icons/fa6"
+import { FaLinkedinIn } from "react-icons/fa"
+import { FaDiscord, FaXTwitter } from "react-icons/fa6"
 import { styled } from "styled-components"
 import decentralandLogo from "../../img/faq/logo.png"
 import logo from "../../img/misc/logo.png"
@@ -11,13 +12,7 @@ const Navbar = () => {
           <img src={decentralandLogo} alt="decentraland-logo" />
           <div className="navbar-navigation">
             <span>
-              <a href="#schedule">Schedule</a>
-            </span>
-            <span>
-              <a href="#talks">Talks</a>
-            </span>
-            <span>
-              <a href="#runways">Runways</a>
+              <a href="#about">About</a>
             </span>
             <span>
               <a href="#faq">FAQ</a>
@@ -35,13 +30,6 @@ const Navbar = () => {
           </a>
           <div className="navbar-social-icons">
             <SocialIcon
-              href="https://www.instagram.com/decentraland_foundation/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaInstagram />
-            </SocialIcon>
-            <SocialIcon
               href="https://x.com/decentraland
 "
               target="_blank"
@@ -49,12 +37,21 @@ const Navbar = () => {
             >
               <FaXTwitter />
             </SocialIcon>
+
             <SocialIcon
               href="https://decentraland.org/discord/"
               target="_blank"
               rel="noopener noreferrer"
             >
               <FaDiscord />
+            </SocialIcon>
+
+            <SocialIcon
+              href="https://www.linkedin.com/company/decentralandorg/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaLinkedinIn />
             </SocialIcon>
           </div>
         </div>
@@ -117,7 +114,7 @@ const NavbarContainer = styled.div`
         span {
           a {
             text-decoration: none;
-            color: #ebecfa;
+            color: #fcfcfc;
             letter-spacing: 0.08em;
             text-transform: uppercase;
           }
