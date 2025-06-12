@@ -7,6 +7,7 @@ import heroTop from "../../img/vectors/logo-central.svg?url"
 import { JumpInBtn } from "../JumpInBtn/JumpInBtn"
 
 const Hero = () => {
+  // comentario test
   const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
