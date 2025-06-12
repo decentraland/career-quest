@@ -112,13 +112,13 @@ const DownloadButtonsContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
 `
 
 const DownloadButton = styled.button`
   background: linear-gradient(to bottom, #a524b3, #ffa25a);
   border-radius: 10px;
-  width: 100%;
-  max-width: 340px;
+  min-width: 280px;
   padding: 16px 20px;
   font-size: 20px;
   font-weight: 700;
@@ -128,6 +128,10 @@ const DownloadButton = styled.button`
 
   &:hover {
     opacity: 0.8;
+  }
+
+  @media (min-width: 568px) {
+    min-width: 340px;
   }
 `
 
