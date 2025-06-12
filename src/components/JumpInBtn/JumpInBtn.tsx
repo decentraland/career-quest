@@ -117,7 +117,8 @@ const DownloadButtonsContainer = styled.div`
 const DownloadButton = styled.button`
   background: linear-gradient(to bottom, #a524b3, #ffa25a);
   border-radius: 10px;
-  min-width: 340px;
+  width: 100%;
+  max-width: 340px;
   padding: 16px 20px;
   font-size: 20px;
   font-weight: 700;
