@@ -69,63 +69,7 @@ const JumpInBtn = ({ className }: DownloadBtnProps) => {
   )
 }
 
-const DownloadButtonsContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 12px;
-
-  .available-on-text {
-    padding-top: 16px;
-  }
-`
-
-const DownloadButton = styled.span`
-  font-size: 16px;
-  font-weight: 400;
-  color: #ebecfa;
-  background-color: #0f1417;
-  text-decoration: none;
-  border: 2px solid #ebecfa;
-  border-radius: 12px;
-  padding: 12px 24px;
-  will-change: background-color, color;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  margin-bottom: 12px;
-  transition:
-    background-color 0.3s ease,
-    color 0.3s ease;
-
-  @media screen and (max-width: 568px) {
-    font-size: 16px;
-    padding: 12px 24px;
-  }
-
-  &:hover {
-    color: #0f1417;
-    background-color: #ebecfa;
-
-    svg {
-      path {
-        fill: #0f1417;
-      }
-    }
-  }
-
-  svg {
-    height: 32px;
-    width: 32px;
-  }
-`
-
 const StyledJumpInBtn = styled(JumpInBtn)`
-  cursor: pointer;
-  margin-top: 12px;
-
   .download-buttons-container {
     display: flex;
     flex-direction: column;
@@ -161,6 +105,28 @@ const StyledJumpInBtn = styled(JumpInBtn)`
     gap: 12px;
     max-width: 400px;
     margin: 0 auto;
+  }
+`
+
+const DownloadButtonsContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`
+
+const DownloadButton = styled.button`
+  background: linear-gradient(to bottom, #a524b3, #ffa25a);
+  border-radius: 10px;
+  min-width: 340px;
+  padding: 16px 20px;
+  font-size: 20px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+
+  &:hover {
+    opacity: 0.8;
   }
 `
 

@@ -1,59 +1,58 @@
-import { useEffect, useState } from "react"
 import { styled } from "styled-components"
+import decentralandLogo from "../../img/faq/logo.png"
 import bgImage from "../../img/misc/background.webp"
-import valuePropCentral from "../../img/misc/value-prop-central.png"
-import LeftNavbarIconSrc from "../../img/vectors/iconos-header-left.svg?url"
-import heroTop from "../../img/vectors/logo-central.svg?url"
 import { JumpInBtn } from "../JumpInBtn/JumpInBtn"
 
 const Hero = () => {
-  const [isMobile, setIsMobile] = useState(false)
-
-  useEffect(() => {
-    const handleResize = () => {
-      const mobileWidth = window.innerWidth <= 568
-      setIsMobile(mobileWidth)
-    }
-
-    window.addEventListener("resize", handleResize)
-    handleResize()
-
-    return () => {
-      window.removeEventListener("resize", handleResize)
-    }
-  }, [])
-
   return (
     <HeroContainer>
       <HeroInnerContainer>
         <div className="hero-top">
-          <img className="hero-top-img" src={heroTop} alt="hero-top" />
-          <img
-            className="hero-top-middle-img"
-            src={valuePropCentral}
-            alt="hero-top"
-          />
+          <p className="hero-date">JULY 16 - 19</p>
+          <img src={decentralandLogo} alt="decentraland-logo" />
+          <p className="hero-info">
+            EXPLORE WEB3 CAREERS, SHARPEN YOUR SKILLS, AND CONNECT WITH THE
+            PEOPLE SHAPING THE FUTURE OF THE INTERNET
+          </p>
         </div>
-        <div className="hero-middle">
-          <h2>
-            {isMobile ? (
-              <>
-                Decentraland is a social virtual world <br /> and the home of
-                Metaverse Fashion Week.
-              </>
-            ) : (
-              <>
-                Decentraland is a social virtual world and the home of Metaverse
-                Fashion Week.
-              </>
-            )}
-          </h2>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            gap: "8px",
+            width: "100%",
+            marginBottom: "24px",
+          }}
+        >
+          <HeroTextContainer>
+            <HeroTextContainerLeft>
+              <p>FREE & OPEN TO ALL</p>
+            </HeroTextContainerLeft>
+            <HeroTextContainerRight>
+              <p>HIRING INSIGHTS</p>
+            </HeroTextContainerRight>
+          </HeroTextContainer>
+
+          <HeroTextContainer>
+            <HeroTextContainerLeft>
+              <p>WORKSHOPS & PANELS</p>
+            </HeroTextContainerLeft>
+            <HeroTextContainerRight>
+              <p>TRAINING GIVEAWAYS</p>
+            </HeroTextContainerRight>
+          </HeroTextContainer>
+
+          <HeroTextContainer>
+            <HeroTextContainerLeft>
+              <p>WIN A WEB3 BOOTCAMP</p>
+            </HeroTextContainerLeft>
+            <HeroTextContainerRight>
+              <p>GAME ARENA</p>
+            </HeroTextContainerRight>
+          </HeroTextContainer>
         </div>
         <div className="hero-bottom">
           <JumpInBtn />
-        </div>
-        <div className="mobile-icons">
-          <img src={LeftNavbarIconSrc} alt="Decentraland Fashion Festival" />
         </div>
       </HeroInnerContainer>
     </HeroContainer>
@@ -63,15 +62,31 @@ const Hero = () => {
 const HeroContainer = styled.div`
   width: 100%;
   height: 100%;
-  background-image: url(${bgImage});
-  background-position: 62% 12%;
-  background-size: 360%;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(${bgImage});
+  background-position: 57% 47%;
+  background-size: 600%;
 
-  @media (min-width: 568px) {
-    padding-top: 100px;
-    background-position: 8% 69%;
-    background-size: 150%;
-    padding-top: 100px;
+  @media (min-width: 640px) {
+    background-position: 48% 50%;
+    background-size: 450%;
+  }
+
+  @media (min-width: 1024px) {
+    background-position: 37% 55%;
+    background-size: 250%;
+  }
+
+  @media (min-width: 1280px) {
+    background-position: 25% 55%;
+    background-size: 200%;
+  }
+
+  @media (min-width: 1440px) {
+    background-position: 5% 55%;
+    background-size: 160%;
   }
 `
 
@@ -86,74 +101,86 @@ const HeroInnerContainer = styled.div`
   align-items: flex-start;
   justify-content: flex-start;
   gap: 8px;
-  margin-top: 11px;
   position: relative;
-
-  .mobile-icons {
-    position: relative;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-block: auto 2rem;
-
-    img {
-      width: 100%;
-      height: 100%;
-      max-width: 200px;
-      object-fit: contain;
-    }
-
-    @media (min-width: 568px) {
-      display: none;
-    }
-  }
-
-  @media screen and (max-width: 568px) {
-    padding: 0px;
-    padding-inline: 14px;
-  }
+  padding: 0px 20px;
 
   .hero-top {
     width: 100%;
     height: 100%;
     max-width: 750px;
+
+    .hero-date {
+      font-size: 40px;
+      font-weight: 800;
+      margin-bottom: 40px;
+    }
+
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
 
-    .hero-top-middle-img {
-      margin-top: 8px;
+    .hero-info {
+      font-size: 16px;
+      font-weight: 700;
+      color: #fcfcfc;
+      margin-top: 5px;
+      margin-bottom: 20px;
     }
   }
+`
 
-  .hero-middle {
-    margin-top: 8px;
+const HeroTextContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  width: 100%;
+`
 
-    h2 {
-      font-size: 21px;
-      margin-left: 12px;
-      color: #ebecfa;
-    }
+const HeroTextContainerLeft = styled.div`
+  width: fit-content;
+  height: 100%;
+  max-width: 750px;
+  background-color: #ebecfa;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  padding: 6px 16px;
+  border: 2px solid #ebecfa;
 
-    @media screen and (max-width: 568px) {
-      h2 {
-        font-size: 16px;
-      }
-    }
+  p {
+    font-size: 10px;
+    color: #081116;
+    font-weight: 700;
+    text-align: center;
   }
 
-  .hero-bottom {
-    margin-top: 10px;
-    padding-inline: 14px;
-    margin-bottom: 100px;
+  @media (min-width: 568px) {
+    p {
+      font-size: 14px;
+    }
+  }
+`
+const HeroTextContainerRight = styled.div`
+  width: fit-content;
+  height: 100%;
+  max-width: 750px;
+  background-color: transparent;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding: 6px 16px;
+  border: 2px solid #ebecfa;
 
-    .available-on-text {
-      padding-top: 0;
+  p {
+    font-size: 10px;
+    color: #ebecfa;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  @media (min-width: 568px) {
+    p {
+      font-size: 14px;
     }
   }
 `
