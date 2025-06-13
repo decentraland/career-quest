@@ -6,11 +6,12 @@ const themeConfig = {
 
 const basicPalette = {
   black: "#000000",
-  white: "#ebecfa",
+  white: "#fcfcfc",
   background: "#040D2D",
   accent: themeConfig.accent,
   blueGray: "#B8BEE5",
   gray: "#CCCCCC",
+  darkGray: "#161518",
 }
 
 const expandedPalette = {
@@ -22,6 +23,7 @@ const expandedPalette = {
   grey400: () => lighten(0.35, basicPalette.black),
   grey300: () => lighten(0.5, basicPalette.black),
   grey100: () => lighten(0.1, basicPalette.black),
+  darkGray600: () => lighten(0.15, basicPalette.darkGray),
 }
 
 const theme = {

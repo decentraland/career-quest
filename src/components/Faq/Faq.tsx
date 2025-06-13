@@ -1,6 +1,6 @@
 import { memo, useState } from "react"
 import { styled } from "styled-components"
-import faqImage from "../../img/faq/logo.png"
+import faqImage from "../../img/faq/career-quest-logo.png"
 import arrowDown from "../../img/icons/arrow-down.png"
 import { breakpoints } from "../../utils/theme"
 

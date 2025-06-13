@@ -1,15 +1,33 @@
+import { useEffect, useState } from "react"
 import { styled } from "styled-components"
-import decentralandLogo from "../../img/faq/logo.png"
+import careerQuestLogo from "../../img/faq/career-quest-logo.png"
 import bgImage from "../../img/misc/background.webp"
+import { breakpoints, theme } from "../../utils/theme"
 import { JumpInBtn } from "../JumpInBtn/JumpInBtn"
 
 const Hero = () => {
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const handleResize = () => {
+      const mobileWidth = window.innerWidth <= 568
+      setIsMobile(mobileWidth)
+    }
+
+    window.addEventListener("resize", handleResize)
+    handleResize()
+
+    return () => {
+      window.removeEventListener("resize", handleResize)
+    }
+  }, [])
+
   return (
     <HeroContainer>
       <HeroInnerContainer>
         <div className="hero-top">
           <p className="hero-date">JULY 16 - 19</p>
-          <img src={decentralandLogo} alt="decentraland-logo" />
+          <img src={careerQuestLogo} alt="decentraland-logo" />
           <p className="hero-info">
             EXPLORE WEB3 CAREERS, SHARPEN YOUR SKILLS, AND CONNECT WITH THE
             PEOPLE SHAPING THE FUTURE OF THE INTERNET
@@ -24,32 +42,66 @@ const Hero = () => {
             marginBottom: "24px",
           }}
         >
-          <HeroTextContainer>
-            <HeroTextContainerLeft>
-              <p>FREE & OPEN TO ALL</p>
-            </HeroTextContainerLeft>
-            <HeroTextContainerRight>
-              <p>HIRING INSIGHTS</p>
-            </HeroTextContainerRight>
-          </HeroTextContainer>
+          {isMobile ? (
+            <>
+              <HeroTextContainer>
+                <HeroTextContainerLeft className="background-fill-white">
+                  <p>FREE & OPEN TO ALL</p>
+                </HeroTextContainerLeft>
+                <HeroTextContainerRight className="background-transparent">
+                  <p>HIRING INSIGHTS</p>
+                </HeroTextContainerRight>
+              </HeroTextContainer>
 
-          <HeroTextContainer>
-            <HeroTextContainerLeft>
-              <p>WORKSHOPS & PANELS</p>
-            </HeroTextContainerLeft>
-            <HeroTextContainerRight>
-              <p>TRAINING GIVEAWAYS</p>
-            </HeroTextContainerRight>
-          </HeroTextContainer>
+              <HeroTextContainer>
+                <HeroTextContainerLeft className="background-transparent">
+                  <p>WORKSHOPS & PANELS</p>
+                </HeroTextContainerLeft>
+                <HeroTextContainerRight className="background-fill-white">
+                  <p>TRAINING GIVEAWAYS</p>
+                </HeroTextContainerRight>
+              </HeroTextContainer>
 
-          <HeroTextContainer>
-            <HeroTextContainerLeft>
-              <p>WIN A WEB3 BOOTCAMP</p>
-            </HeroTextContainerLeft>
-            <HeroTextContainerRight>
-              <p>GAME ARENA</p>
-            </HeroTextContainerRight>
-          </HeroTextContainer>
+              <HeroTextContainer>
+                <HeroTextContainerLeft className="background-fill-white">
+                  <p>WIN A WEB3 BOOTCAMP</p>
+                </HeroTextContainerLeft>
+                <HeroTextContainerRight className="background-transparent">
+                  <p>GAME ARENA</p>
+                </HeroTextContainerRight>
+              </HeroTextContainer>
+            </>
+          ) : (
+            <>
+              <HeroTextContainer>
+                <HeroTextContainerLeft className="background-fill-white">
+                  <p>FREE & OPEN TO ALL</p>
+                </HeroTextContainerLeft>
+
+                <HeroTextContainerCenter className="background-transparent">
+                  <p>HIRING INSIGHTS</p>
+                </HeroTextContainerCenter>
+
+                <HeroTextContainerRight className="background-fill-white">
+                  <p>WORKSHOPS & PANELS</p>
+                </HeroTextContainerRight>
+              </HeroTextContainer>
+
+              <HeroTextContainer>
+                <HeroTextContainerLeft className="background-transparent">
+                  <p>TRAINING GIVEAWAYS</p>
+                </HeroTextContainerLeft>
+
+                <HeroTextContainerCenter className="background-fill-white">
+                  <p>WIN A WEB3 BOOTCAMP</p>
+                </HeroTextContainerCenter>
+
+                <HeroTextContainerRight className="background-transparent">
+                  <p>GAME ARENA</p>
+                </HeroTextContainerRight>
+              </HeroTextContainer>
+            </>
+          )}
         </div>
         <div className="hero-bottom">
           <JumpInBtn />
@@ -93,9 +145,9 @@ const HeroContainer = styled.div`
 const HeroInnerContainer = styled.div`
   width: 100%;
   height: auto;
-  max-width: 1240px;
+  /* max-width: 1240px; */
   margin: 0 auto;
-  color: #ebecfa;
+  color: ${theme.white};
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -103,6 +155,14 @@ const HeroInnerContainer = styled.div`
   gap: 8px;
   position: relative;
   padding: 0px 20px;
+
+  @media (min-width: ${breakpoints.md}) {
+    padding: 0px 70px;
+  }
+
+  @media (min-width: ${breakpoints.l}) {
+    padding: 0px 100px;
+  }
 
   .hero-top {
     width: 100%;
@@ -124,7 +184,7 @@ const HeroInnerContainer = styled.div`
     .hero-info {
       font-size: 16px;
       font-weight: 700;
-      color: #fcfcfc;
+      color: ${theme.white};
       margin-top: 5px;
       margin-bottom: 20px;
     }
@@ -142,17 +202,31 @@ const HeroTextContainerLeft = styled.div`
   width: fit-content;
   height: 100%;
   max-width: 750px;
-  background-color: #ebecfa;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
   padding: 6px 16px;
-  border: 2px solid #ebecfa;
+  border: 2px solid ${theme.white};
 
   p {
     font-size: 10px;
-    color: #081116;
     font-weight: 700;
     text-align: center;
+  }
+
+  &.background-fill-white {
+    background-color: ${theme.white};
+
+    p {
+      color: ${theme.darkGray};
+    }
+  }
+
+  &.background-transparent {
+    background-color: transparent;
+
+    p {
+      color: ${theme.white};
+    }
   }
 
   @media (min-width: 568px) {
@@ -161,21 +235,73 @@ const HeroTextContainerLeft = styled.div`
     }
   }
 `
-const HeroTextContainerRight = styled.div`
+
+const HeroTextContainerCenter = styled.div`
   width: fit-content;
   height: 100%;
   max-width: 750px;
   background-color: transparent;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
   padding: 6px 16px;
-  border: 2px solid #ebecfa;
+  border: 2px solid ${theme.white};
 
   p {
     font-size: 10px;
-    color: #ebecfa;
     font-weight: 700;
     text-align: center;
+  }
+
+  &.background-fill-white {
+    background-color: ${theme.white};
+
+    p {
+      color: ${theme.darkGray};
+    }
+  }
+
+  &.background-transparent {
+    background-color: transparent;
+
+    p {
+      color: ${theme.white};
+    }
+  }
+
+  @media (min-width: 568px) {
+    p {
+      font-size: 14px;
+    }
+  }
+`
+
+const HeroTextContainerRight = styled.div`
+  width: fit-content;
+  height: 100%;
+  max-width: 750px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding: 6px 16px;
+  border: 2px solid ${theme.white};
+
+  p {
+    font-size: 10px;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  &.background-fill-white {
+    background-color: ${theme.white};
+
+    p {
+      color: ${theme.darkGray};
+    }
+  }
+
+  &.background-transparent {
+    background-color: transparent;
+
+    p {
+      color: ${theme.white};
+    }
   }
 
   @media (min-width: 568px) {
