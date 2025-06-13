@@ -1,4 +1,5 @@
 import { styled } from "styled-components"
+import { theme } from "../../utils/theme"
 
 /**
  * Interface for marquee item data
@@ -16,27 +17,33 @@ interface MarqueeItem {
  */
 const Marquee = () => {
   const items: MarqueeItem[] = [
-    { id: 1, text: "METAVERSE FASHION WEEK" },
-    { id: 2, text: "APRIL 9-12" },
-    { id: 3, text: "FREE ENTRY" },
-    { id: 4, text: "FRONT ROW ACCESS" },
-    { id: 5, text: "ICONIC RUNWAYS" },
-    { id: 6, text: "EPIC GIVEAWAYS" },
+    { id: 1, text: "WEB3 CAREERS" },
+    { id: 2, text: "EXPERT PANELS" },
+    { id: 3, text: "SKILLS CHALLENGES" },
+    { id: 4, text: "LIVE WORKSHOPS" },
+    { id: 5, text: "TRAINING GIVEAWAYS" },
+    { id: 6, text: "CAREER GUIDANCE" },
     { id: 7, text: "INSIDER CAREER TALKS" },
-    { id: 8, text: "METAVERSE FASHION WEEK" },
-    { id: 9, text: "APRIL 9-12" },
-    { id: 10, text: "FREE ENTRY" },
-    { id: 11, text: "FRONT ROW ACCESS" },
-    { id: 12, text: "ICONIC RUNWAYS" },
-    { id: 13, text: "EPIC GIVEAWAYS" },
-    { id: 14, text: "INSIDER CAREER TALKS" },
-    { id: 15, text: "METAVERSE FASHION WEEK" },
-    { id: 16, text: "APRIL 9-12" },
-    { id: 17, text: "FREE ENTRY" },
-    { id: 18, text: "FRONT ROW ACCESS" },
-    { id: 19, text: "ICONIC RUNWAYS" },
-    { id: 20, text: "EPIC GIVEAWAYS" },
-    { id: 21, text: "INSIDER CAREER TALKS" },
+    { id: 8, text: "GAME ARENA" },
+    { id: 9, text: "WIN A BOOTCAMP" },
+    { id: 10, text: "WEB3 CAREERS" },
+    { id: 11, text: "EXPERT PANELS" },
+    { id: 12, text: "SKILLS CHALLENGES" },
+    { id: 13, text: "LIVE WORKSHOPS" },
+    { id: 14, text: "TRAINING GIVEAWAYS" },
+    { id: 15, text: "CAREER GUIDANCE" },
+    { id: 16, text: "INSIDER CAREER TALKS" },
+    { id: 17, text: "GAME ARENA" },
+    { id: 18, text: "WIN A BOOTCAMP" },
+    { id: 19, text: "WEB3 CAREERS" },
+    { id: 20, text: "EXPERT PANELS" },
+    { id: 21, text: "SKILLS CHALLENGES" },
+    { id: 22, text: "LIVE WORKSHOPS" },
+    { id: 23, text: "TRAINING GIVEAWAYS" },
+    { id: 24, text: "CAREER GUIDANCE" },
+    { id: 25, text: "INSIDER CAREER TALKS" },
+    { id: 26, text: "GAME ARENA" },
+    { id: 27, text: "WIN A BOOTCAMP" },
   ]
 
   // Double the items to ensure smooth infinite scroll
@@ -61,10 +68,10 @@ const MarqueeContainer = styled.div`
   gap: 1rem;
   padding: 1rem 0;
   overflow: hidden;
-  background-color: #0f1417;
+  background-color: ${theme.black};
   padding-block: 0.7rem;
-  border-top: 2px solid #ebecfa;
-  border-bottom: 2px solid #ebecfa;
+  border-top: 2px solid ${theme.white};
+  border-bottom: 2px solid ${theme.white};
 `
 
 const MarqueeWrapper = styled.div`
@@ -104,12 +111,12 @@ const MarqueeContent = styled.div`
 `
 
 const MarqueeItem = styled.span`
-  font-size: 1.125rem;
-  font-weight: 600;
+  font-size: 14px;
+  font-weight: 900;
   padding: 0.5rem 1.5rem;
   margin: 0 0.5rem;
   border-radius: 0.375rem;
-  color: #ebecfa;
+  color: ${theme.white};
   letter-spacing: 0.08em;
 `
 

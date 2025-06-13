@@ -3,19 +3,18 @@ import { useEffect, useRef } from "react"
 import Lenis from "lenis"
 import { styled } from "styled-components"
 // Components
-import { ExperiencesSection } from "./components/ExperiencesSection"
+// import { ExperiencesSection } from "./components/ExperiencesSection"
 import { Faq } from "./components/Faq/Faq"
 import { Footer } from "./components/Footer/Footer"
-import { Carousel } from "./components/Hero/Carousel"
 import { Hero } from "./components/Hero/Hero"
-import { LiveTalks } from "./components/LiveTalks/LiveTalks"
+// import { LiveTalks } from "./components/LiveTalks/LiveTalks"
 // import { Map } from "./components/Map/Map"
 import { Marquee } from "./components/Marquee/Marquee"
 import { Navbar } from "./components/Navbar/Navbar"
 // CSS
 import "./css/global.css"
 import { ScheduleSection } from "./components/ScheduleSection/ScheduleSection"
-import { VideoSection } from "./components/VideoSection"
+// import { VideoSection } from "./components/VideoSection"
 // Images
 
 const App = () => {
@@ -49,15 +48,18 @@ const App = () => {
       <Navbar />
       <AppContainer>
         <Hero />
-        <Carousel />
-        {/* <MarqueeWrapper>
-          <Marquee />
-        </MarqueeWrapper> */}
-        <ScheduleSection />
+
         <MarqueeWrapper>
           <Marquee />
         </MarqueeWrapper>
-        <VideoSection />
+
+        <ScheduleSection />
+
+        <MarqueeWrapper>
+          <Marquee />
+        </MarqueeWrapper>
+
+        {/* <VideoSection />
         <MarqueeWrapper>
           <Marquee />
         </MarqueeWrapper>
@@ -68,7 +70,7 @@ const App = () => {
         <ExperiencesSection />
         <MarqueeWrapper>
           <Marquee />
-        </MarqueeWrapper>
+        </MarqueeWrapper> */}
 
         <Faq />
         <Footer />
