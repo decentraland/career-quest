@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { styled } from "styled-components"
+import { theme } from "../../utils/theme"
 import { launchDesktopApp } from "../../utils/utils"
 import { DownloadBtn } from "../DownloadBtn/DownloadBtn"
 import { Modal } from "../Modal"
@@ -88,13 +89,13 @@ const StyledJumpInBtn = styled(JumpInBtn)`
   .available-on-text {
     font-size: 16px;
     margin-top: 16px;
-    color: #ebecfa;
+    color: ${theme.white};
     text-decoration: none;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 12px;
-    border: 1px solid #ebecfa;
+    border: 1px solid ${theme.white};
   }
 
   .modal-content {
@@ -116,7 +117,7 @@ const DownloadButtonsContainer = styled.div`
 `
 
 const DownloadButton = styled.button`
-  background: linear-gradient(to bottom, #a524b3, #ffa25a);
+  background: linear-gradient(to bottom, ${theme.purple}, ${theme.orange});
   border-radius: 10px;
   min-width: 280px;
   padding: 16px 20px;

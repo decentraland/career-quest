@@ -12,6 +12,8 @@ const basicPalette = {
   blueGray: "#B8BEE5",
   gray: "#CCCCCC",
   darkGray: "#161518",
+  purple: "#a524b3",
+  orange: "#ffa25a",
 }
 
 const expandedPalette = {

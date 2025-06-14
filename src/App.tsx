@@ -4,6 +4,7 @@ import Lenis from "lenis"
 import { styled } from "styled-components"
 // Components
 // import { ExperiencesSection } from "./components/ExperiencesSection"
+import { About } from "./components/About/About"
 import { Faq } from "./components/Faq/Faq"
 import { Footer } from "./components/Footer/Footer"
 import { Hero } from "./components/Hero/Hero"
@@ -13,7 +14,7 @@ import { Marquee } from "./components/Marquee/Marquee"
 import { Navbar } from "./components/Navbar/Navbar"
 // CSS
 import "./css/global.css"
-import { ScheduleSection } from "./components/ScheduleSection/ScheduleSection"
+// import { ScheduleSection } from "./components/ScheduleSection/ScheduleSection"
 // import { VideoSection } from "./components/VideoSection"
 // Images
 
@@ -53,7 +54,8 @@ const App = () => {
           <Marquee />
         </MarqueeWrapper>
 
-        <ScheduleSection />
+        {/* <ScheduleSection /> */}
+        <About />
 
         <MarqueeWrapper>
           <Marquee />
