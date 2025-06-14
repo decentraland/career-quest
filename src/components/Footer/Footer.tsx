@@ -1,162 +1,130 @@
-import styledComponents from "styled-components"
+import { FaLinkedinIn } from "react-icons/fa"
+import { FaDiscord, FaXTwitter } from "react-icons/fa6"
+import { styled } from "styled-components"
 import decentralandLogo from "../../img/icons/logo.png"
-import { breakpoints } from "../../utils/theme.js"
-import { Discord } from "../icons/Vector-Discord.js"
-import { Instagram } from "../icons/Vector-Instagram.js"
-import { Twitter } from "../icons/Vector-Twitter.js"
+import { breakpoints, theme } from "../../utils/theme"
 
 const Footer = () => {
   return (
-    <StyledFooter className="Footer">
-      <Nav>
-        <FooterLeft>
-          <a
-            href="https://decentraland.org/?utm_org=dcl&utm_source=decentraland&utm_medium=musiclanding&utm_campaign=musicfestival24"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <LogoContainer>
-              <LogoImage src={decentralandLogo} alt="DMF 2024 Logo" />
-            </LogoContainer>
-          </a>
-          <FooterText
-            href="https://decentraland.org/terms/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Terms & Services
-          </FooterText>
-          <FooterText
-            href="https://decentraland.org/privacy/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Privacy Policy
-          </FooterText>
-        </FooterLeft>
+    <FooterContainer>
+      <FooterLeft>
+        <LogoImage src={decentralandLogo} alt="DMF 2025 Logo" />
 
-        <FooterRight>
-          <SocialIcon
-            href="https://twitter.com/decentraland"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Twitter />
-          </SocialIcon>
-          <SocialIcon
-            href="https://www.instagram.com/decentraland_foundation/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Instagram />
-          </SocialIcon>
-          <SocialIcon
-            href="https://decentraland.org/discord/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Discord />
-          </SocialIcon>
-        </FooterRight>
-      </Nav>
-    </StyledFooter>
+        <a
+          href="https://decentraland.org/terms/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Terms & Services
+        </a>
+        <a
+          href="https://decentraland.org/privacy/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Privacy Policy
+        </a>
+      </FooterLeft>
+      <FooterRight>
+        <SocialIcon
+          href="https://x.com/decentraland"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaXTwitter />
+        </SocialIcon>
+        <SocialIcon
+          href="https://decentraland.org/discord/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaDiscord />
+        </SocialIcon>
+        <SocialIcon
+          href="https://www.linkedin.com/company/decentralandorg/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaLinkedinIn />
+        </SocialIcon>
+      </FooterRight>
+    </FooterContainer>
   )
 }
 
-const StyledFooter = styledComponents.section`
+const FooterContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  background-color: #000000;
-  width: 100%;
-`
-
-const FooterLeft = styledComponents.div`
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 24px;
-  width: 50%;
-`
-
-const FooterRight = styledComponents.div`
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 12px;
-`
-
-const FooterText = styledComponents.a`
-  color: #efefef;
-  font-size: 12px;
-  font-weight: 700;
-  font-family: "InterMedium", sans-serif;
-  letter-spacing: 3px;
-  text-decoration: none;
-  text-transform: uppercase;
-  cursor: pointer;
-  width: fit-content;
-`
-
-const SocialIcon = styledComponents.a`
-  cursor: pointer;
-  display: inline-block;
-  border-radius: 100%;
-  transition: transform 0.4s ease;
-  background-color: #ebecfa;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 8px;
-
-  :hover {
-    transform: scale(1.1);
-    transition: transform 0.4s ease;
-    will-change: transform;
-  }
-
-  svg {
-    filter: invert(1);
-    width: 24px;
-    height: 24px;
-
-    path {
-      fill: #ebecfa;
-      transition: fill 0.4s ease;
-    }
-
-    :hover path {
-      fill: black;
-    }
-  }
-`
-
-const Nav = styledComponents.nav`
-  width: 100%;
-  display: flex;
-  padding: 24px 24px;
-  flex-direction: column;
   align-items: flex-start;
-  justify-content: space-between;
-  gap: 24px;
+  padding: 20px;
+  background-color: ${theme.black};
+  width: 100%;
+  border-top: 0.5px solid ${theme.white};
 
-  @media screen and (min-width: ${breakpoints.s}) {
-    flex-direction: row;
-    justify-content: space-between;
+  @media (min-width: ${breakpoints.md}) {
+    padding: 20px 40px;
     align-items: center;
-    padding: 18px 62px;
+  }
+
+  @media (min-width: ${breakpoints.l}) {
+    padding: 20px 60px;
   }
 `
 
-const LogoContainer = styledComponents.a`
-  cursor: pointer;
+const FooterLeft = styled.div`
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  gap: 24px;
+
+  @media (min-width: ${breakpoints.md}) {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  p {
+    font-size: 14px;
+    font-weight: 700;
+    color: ${theme.white};
+  }
 `
 
-const LogoImage = styledComponents.img`
-  height: 24px;
+const LogoImage = styled.img`
+  height: 32px;
   width: auto;
 `
 
-// eslint-disable-next-line import/no-default-export
+const FooterRight = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+`
+
+const SocialIcon = styled.a`
+  background-color: ${theme.white};
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+
+  @media (min-width: ${breakpoints.xl}) {
+    width: 52px;
+    height: 52px;
+  }
+
+  svg {
+    width: 20px;
+    height: 20px;
+
+    @media (min-width: ${breakpoints.xl}) {
+      width: 24px;
+      height: 24px;
+    }
+
+    fill: ${theme.darkGray};
+  }
+`
+
 export { Footer }
