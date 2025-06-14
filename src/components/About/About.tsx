@@ -67,7 +67,7 @@ const About = () => {
 
 const AboutContainer = styled.div`
   background-color: ${theme.black};
-  padding: 40px 20px;
+  padding: 60px 20px;
   width: 100%;
   height: 100%;
   display: flex;
@@ -76,7 +76,7 @@ const AboutContainer = styled.div`
   gap: 20px;
 
   @media (min-width: ${breakpoints.md}) {
-    padding: 60px 20px;
+    padding: 80px 20px;
   }
 
   @media (min-width: ${breakpoints.l}) {
@@ -91,6 +91,7 @@ const TitleAboutSection = styled.h2`
   font-size: 40px;
   font-weight: 900;
   color: ${theme.white};
+  letter-spacing: 0.1em;
 `
 
 const DivVerticalLine = styled.div`
