@@ -3,20 +3,15 @@ import { useEffect, useRef } from "react"
 import Lenis from "lenis"
 import { styled } from "styled-components"
 // Components
-// import { ExperiencesSection } from "./components/ExperiencesSection"
 import { About } from "./components/About/About"
 import { Faq } from "./components/Faq/Faq"
 import { Footer } from "./components/Footer/Footer"
 import { Hero } from "./components/Hero/Hero"
-// import { LiveTalks } from "./components/LiveTalks/LiveTalks"
-// import { Map } from "./components/Map/Map"
 import { Marquee } from "./components/Marquee/Marquee"
 import { Navbar } from "./components/Navbar/Navbar"
+import { Newsletter } from "./components/Newsletter/Newsletter"
 // CSS
 import "./css/global.css"
-// import { ScheduleSection } from "./components/ScheduleSection/ScheduleSection"
-// import { VideoSection } from "./components/VideoSection"
-// Images
 
 const App = () => {
   const lenisRef = useRef<Lenis | null>(null)
@@ -54,27 +49,15 @@ const App = () => {
           <Marquee />
         </MarqueeWrapper>
 
-        {/* <ScheduleSection /> */}
         <About />
 
         <MarqueeWrapper>
           <Marquee />
         </MarqueeWrapper>
 
-        {/* <VideoSection />
-        <MarqueeWrapper>
-          <Marquee />
-        </MarqueeWrapper>
-        <LiveTalks />
-        <MarqueeWrapper>
-          <Marquee />
-        </MarqueeWrapper>
-        <ExperiencesSection />
-        <MarqueeWrapper>
-          <Marquee />
-        </MarqueeWrapper> */}
-
         <Faq />
+
+        <Newsletter />
         <Footer />
       </AppContainer>
     </div>

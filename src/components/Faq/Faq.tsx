@@ -152,7 +152,7 @@ const Faq = () => {
   ]
 
   return (
-    <SectionContainer>
+    <SectionContainer id="faq">
       <LeftContainer>
         <Title>Frequently Asked Questions</Title>
       </LeftContainer>
