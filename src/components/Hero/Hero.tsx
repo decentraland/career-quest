@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { styled } from "styled-components"
 import careerQuestLogo from "../../img/faq/career-quest-logo.png"
-import bgImage from "../../img/misc/background.webp"
+import bgImage from "../../img/misc/background-2.png"
 import { breakpoints, theme } from "../../utils/theme"
 import { JumpInBtn } from "../JumpInBtn/JumpInBtn"
 
@@ -26,7 +26,7 @@ const Hero = () => {
     <HeroContainer>
       <HeroInnerContainer>
         <div className="hero-top">
-          <p className="hero-date">JULY 16 - 19</p>
+          <p className="hero-date">JULY 16 - 17</p>
           <img src={careerQuestLogo} alt="decentraland-logo" />
           <p className="hero-info">
             EXPLORE WEB3 CAREERS, SHARPEN YOUR SKILLS, AND CONNECT WITH THE
@@ -55,7 +55,7 @@ const Hero = () => {
 
               <HeroTextContainer>
                 <HeroTextContainerLeft className="background-transparent">
-                  <p>WORKSHOPS & PANELS</p>
+                  <p>EXPERT WORKSHOPS</p>
                 </HeroTextContainerLeft>
                 <HeroTextContainerRight className="background-fill-white">
                   <p>TRAINING GIVEAWAYS</p>
@@ -83,7 +83,7 @@ const Hero = () => {
                 </HeroTextContainerCenter>
 
                 <HeroTextContainerRight className="background-fill-white">
-                  <p>WORKSHOPS & PANELS</p>
+                  <p>EXPERT WORKSHOPS</p>
                 </HeroTextContainerRight>
               </HeroTextContainer>
 
@@ -116,29 +116,29 @@ const HeroContainer = styled.div`
   height: 100%;
   padding-top: 100px;
   padding-bottom: 100px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
     url(${bgImage});
   background-position: 57% 47%;
-  background-size: 600%;
+  background-size: 200%;
 
   @media (min-width: 640px) {
     background-position: 48% 50%;
-    background-size: 450%;
+    background-size: 170%;
   }
 
   @media (min-width: 1024px) {
     background-position: 37% 55%;
-    background-size: 250%;
+    background-size: 140%;
   }
 
   @media (min-width: 1280px) {
     background-position: 25% 55%;
-    background-size: 200%;
+    background-size: 100%;
   }
 
   @media (min-width: 1440px) {
     background-position: 5% 55%;
-    background-size: 160%;
+    background-size: 100%;
   }
 `
 

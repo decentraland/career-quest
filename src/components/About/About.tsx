@@ -38,8 +38,7 @@ const About = () => {
         </LiAbout>
 
         <LiAbout>
-          Attend <SpanAbout>8+ live</SpanAbout> panels, workshops, and expert
-          sessions
+          Attend <SpanAbout>8+</SpanAbout> workshops, and expert sessions
         </LiAbout>
 
         <LiAbout>
@@ -48,12 +47,9 @@ const About = () => {
         </LiAbout>
 
         <LiAbout>
-          Connect with <SpanAbout>Bondex, Metana and Shefi</SpanAbout> for
+          Connect with{" "}
+          <SpanAbout>Bondex, web3.career, Metana and Shefi</SpanAbout> for
           hiring + training insights
-        </LiAbout>
-
-        <LiAbout>
-          Explore <SpanAbout>16 designer</SpanAbout> showrooms
         </LiAbout>
 
         <LiAbout>

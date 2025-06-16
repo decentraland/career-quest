@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react"
+import { FaApple } from "react-icons/fa"
+import { FaWindows } from "react-icons/fa6"
 import { styled } from "styled-components"
+import { useAdvancedUserAgentData } from "../../hooks/useAdvancedUserAgentData"
 import { theme } from "../../utils/theme"
 import { launchDesktopApp } from "../../utils/utils"
 import { DownloadBtn } from "../DownloadBtn/DownloadBtn"
@@ -13,6 +16,26 @@ interface DownloadBtnProps {
 const JumpInBtn = ({ className }: DownloadBtnProps) => {
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
+  const [isLoading, userAgentData] = useAdvancedUserAgentData()
+
+  const getButtonText = () => {
+    if (isLoading) return "Searching device..."
+    if (userAgentData?.os.name === "macOS")
+      return (
+        <ButtonContent>
+          DOWNLOAD FOR MACOS
+          <FaApple style={{ width: "24px", height: "24px" }} />
+        </ButtonContent>
+      )
+    if (userAgentData?.os.name === "Windows")
+      return (
+        <ButtonContent>
+          DOWNLOAD FOR WINDOWS
+          <FaWindows style={{ width: "24px", height: "24px" }} />
+        </ButtonContent>
+      )
+    return "JUMP IN"
+  }
 
   const handleClick = async (e: React.MouseEvent<HTMLButtonElement>) => {
     if (isMobile) {
@@ -50,7 +73,7 @@ const JumpInBtn = ({ className }: DownloadBtnProps) => {
             handleClick(e as React.MouseEvent<HTMLButtonElement>)
           }
         >
-          JUMP IN
+          {getButtonText()}
         </DownloadButton>
       </DownloadButtonsContainer>
       <Modal
@@ -134,6 +157,13 @@ const DownloadButton = styled.button`
   @media (min-width: 568px) {
     min-width: 340px;
   }
+`
+
+const ButtonContent = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
 `
 
 const ModalContent = styled.div`
