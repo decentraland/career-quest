@@ -18,14 +18,12 @@ const JumpInBtn = ({ className }: DownloadBtnProps) => {
   const [isMobile, setIsMobile] = useState(false)
   const [isLoading, userAgentData] = useAdvancedUserAgentData()
 
-  const isDesktop = !userAgentData?.mobile
-
   const getButtonText = () => {
     if (isLoading) return "Searching device..."
 
     const os = userAgentData?.os.name
 
-    if (os === "macOS" && (isDesktop || isMobile)) {
+    if (os === "macOS") {
       return (
         <ButtonContent>
           DOWNLOAD FOR MACOS
@@ -33,7 +31,7 @@ const JumpInBtn = ({ className }: DownloadBtnProps) => {
         </ButtonContent>
       )
     }
-    if (os === "Windows" && (isDesktop || isMobile)) {
+    if (os === "Windows") {
       return (
         <ButtonContent>
           DOWNLOAD FOR WINDOWS
