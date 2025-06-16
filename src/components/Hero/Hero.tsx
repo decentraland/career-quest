@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { styled } from "styled-components"
 import careerQuestLogo from "../../img/faq/career-quest-logo.png"
-import bgImage from "../../img/misc/background-2.png"
+import bgImage from "../../img/misc/background.png"
 import { breakpoints, theme } from "../../utils/theme"
 import { JumpInBtn } from "../JumpInBtn/JumpInBtn"
 
