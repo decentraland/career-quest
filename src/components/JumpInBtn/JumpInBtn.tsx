@@ -17,14 +17,15 @@ const JumpInBtn = ({ className }: DownloadBtnProps) => {
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
   const [isLoading, userAgentData] = useAdvancedUserAgentData()
-  console.log(userAgentData)
+
+  const isDesktop = !userAgentData?.mobile
 
   const getButtonText = () => {
     if (isLoading) return "Searching device..."
 
     const os = userAgentData?.os.name
 
-    if (os === "macOS") {
+    if (os === "macOS" && (isDesktop || isMobile)) {
       return (
         <ButtonContent>
           DOWNLOAD FOR MACOS
@@ -32,7 +33,7 @@ const JumpInBtn = ({ className }: DownloadBtnProps) => {
         </ButtonContent>
       )
     }
-    if (os === "Windows") {
+    if (os === "Windows" && (isDesktop || isMobile)) {
       return (
         <ButtonContent>
           DOWNLOAD FOR WINDOWS
@@ -41,7 +42,7 @@ const JumpInBtn = ({ className }: DownloadBtnProps) => {
       )
     }
 
-    return "JUMP IN"
+    return "DOWNLOAD"
   }
 
   const handleClick = async (e: React.MouseEvent<HTMLButtonElement>) => {

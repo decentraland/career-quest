@@ -259,10 +259,6 @@ const MenuIcon = styled.button`
   width: 38px;
   height: 38px;
 
-  &:hover {
-    background-color: ${theme.white};
-  }
-
   @media (min-width: ${breakpoints.md}) {
     display: none;
   }
@@ -271,10 +267,6 @@ const MenuIcon = styled.button`
     width: 12px;
     height: 12px;
     fill: ${theme.white};
-
-    &:hover {
-      fill: ${theme.darkGray};
-    }
   }
 `
 
