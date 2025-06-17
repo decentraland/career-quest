@@ -38,7 +38,7 @@ const About = () => {
         </LiAbout>
 
         <LiAbout>
-          Attend <SpanAbout>8+</SpanAbout> workshops, and expert sessions
+          Attend <SpanAbout>8+</SpanAbout> workshops and expert sessions
         </LiAbout>
 
         <LiAbout>
@@ -49,11 +49,11 @@ const About = () => {
         <LiAbout>
           Connect with{" "}
           <SpanAbout>Bondex, web3.career, Metana and Shefi</SpanAbout> for
-          hiring + training insights
+          hiring & training insights
         </LiAbout>
 
         <LiAbout>
-          Win <SpanAbout>2 fully founded</SpanAbout> Web3 bootcamps worth
+          Win <SpanAbout>2 fully-funded&quot;</SpanAbout> Web3 bootcamps worth
           $12,000+
         </LiAbout>
       </ul>

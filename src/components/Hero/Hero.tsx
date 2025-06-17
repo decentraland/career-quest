@@ -29,8 +29,8 @@ const Hero = () => {
           <p className="hero-date">JULY 16 - 17</p>
           <img src={careerQuestLogo} alt="decentraland-logo" />
           <p className="hero-info">
-            EXPLORE WEB3 CAREERS, SHARPEN YOUR SKILLS, AND CONNECT WITH THE
-            PEOPLE SHAPING THE FUTURE OF THE INTERNET
+            EXPLORE WEB3 CAREERS, SHARPEN YOUR SKILLS, AND CONNECT WITH TOP
+            HIRING TEAMS
           </p>
         </div>
         <div

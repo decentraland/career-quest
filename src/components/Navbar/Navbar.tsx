@@ -54,8 +54,7 @@ const Navbar = () => {
 
             <div className="navbar-right">
               <a
-                href="https://decentraland.org/?utm_org=dcl&utm_source=mvfwlanding&utm_medium=organic&utm_campaign=mvfw&utm_term=header
-    "
+                href="https://decentraland.org/?utm_org=dcl&utm_source=landing&utm_medium=organic&utm_campaign=careerquest"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="decentraland-logo"

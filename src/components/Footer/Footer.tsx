@@ -13,14 +13,14 @@ const Footer = () => {
         <a
           href="https://decentraland.org/terms/"
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
         >
           Terms & Services
         </a>
         <a
           href="https://decentraland.org/privacy/"
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
         >
           Privacy Policy
         </a>

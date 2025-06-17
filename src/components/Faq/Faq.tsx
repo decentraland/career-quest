@@ -36,7 +36,7 @@ const Faq = () => {
           Decentraland Career Quest will take place in Decentraland. Download
           the{" "}
           <a
-            href="https://decentraland.org/download/?utm_org=dcl&utm_source=site&utm_medium=organic&utm_campaign=careerquest"
+            href="https://decentraland.org/download?utm_org=dcl&utm_source=landing&utm_medium=organic&utm_campaign=careerquest"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -74,8 +74,7 @@ const Faq = () => {
           You don&apos;t need cryptocurrency to enjoy Decentraland—it&apos;s
           free to explore. If you want to buy a community-made creation from the{" "}
           <a
-            href="https://decentraland.org/marketplace/?utm_org=dcl&utm_source=site&utm_medium=organic&utm_campaign=careerquest"
-            target="_blank"
+            href="https://decentraland.org/marketplace/?utm_org=dcl&utm_source=landing&utm_medium=organic&utm_campaign=careerquest"
             rel="noopener noreferrer"
           >
             Marketplace
@@ -268,7 +267,7 @@ const Answer = styled.div<{ $isActive: boolean }>`
 
   a {
     text-decoration: underline !important;
-    color: ${theme.white};
+    color: blue;
     text-underline-offset: 4px;
     text-decoration-thickness: 1px;
   }
