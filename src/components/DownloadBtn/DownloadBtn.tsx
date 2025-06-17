@@ -94,7 +94,7 @@ const DownloadBtn = ({
       if (typeof analytics !== "undefined" && !mobileDevice) {
         analytics.track("Download", {
           href: e.currentTarget.href,
-          section: "MVFW Hero",
+          section: "Carreer Quest Hero",
         })
       }
     } catch (error) {
