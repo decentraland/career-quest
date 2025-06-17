@@ -82,7 +82,7 @@ const Faq = () => {
           , you can use a credit/debit card, bank transfer, or a variety of
           cryptocurrencies. As for a{" "}
           <a
-            href="https://docs.decentraland.org/player/blockchain-integration/get-a-wallet/?utm_org=dcl&utm_source=site&utm_medium=organic&utm_campaign=careerquest"
+            href="https://docs.decentraland.org/player/blockchain-integration/get-a-wallet/?utm_org=dcl&utm_source=landing&utm_medium=organic&utm_campaign=careerquest"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -138,7 +138,7 @@ const Faq = () => {
           know-how and endless creative ideas! Everything you need to know to
           start your creative journey can be found on the{" "}
           <a
-            href="https://decentraland.org/create/?utm_org=dcl&utm_source=site&utm_medium=organic&utm_campaign=careerquest"
+            href="https://decentraland.org/create/?utm_org=dcl&utm_source=landing&utm_medium=organic&utm_campaign=careerquest"
             target="_blank"
             rel="noopener noreferrer"
           >
