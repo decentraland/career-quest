@@ -48,12 +48,12 @@ const About = () => {
 
         <LiAbout>
           Connect with{" "}
-          <SpanAbout>Bondex, web3.career, Metana and Shefi</SpanAbout> for
+          <SpanAbout>Bondex, web3.career, Metana and SheFi</SpanAbout> for
           hiring & training insights
         </LiAbout>
 
         <LiAbout>
-          Win <SpanAbout>2 fully-funded&quot;</SpanAbout> Web3 bootcamps worth
+          Win <SpanAbout>2 fully-funded</SpanAbout> Web3 bootcamps worth
           $12,000+
         </LiAbout>
       </ul>
