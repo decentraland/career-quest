@@ -53,7 +53,7 @@ const About = () => {
         </LiAbout>
 
         <LiAbout>
-          Win <SpanAbout>2 fully-funded&quot;</SpanAbout> Web3 bootcamps worth
+          Win <SpanAbout>2 fully-funded</SpanAbout> Web3 bootcamps worth
           $12,000+
         </LiAbout>
       </ul>
