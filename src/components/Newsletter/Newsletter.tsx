@@ -10,7 +10,7 @@ const Newsletter = () => {
     document.body.appendChild(script)
 
     return () => {
-      document.body.removeChild(script) // Limpieza al desmontar el componente
+      document.body.removeChild(script)
     }
   }, [])
   return (
