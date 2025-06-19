@@ -3,13 +3,18 @@ import { useEffect, useRef } from "react"
 import Lenis from "lenis"
 // Components
 import { About } from "./components/About/About"
+import { Carousel } from "./components/Carousel/Carousel"
 import { Faq } from "./components/Faq/Faq"
 import { Footer } from "./components/Footer/Footer"
 import { Hero } from "./components/Hero/Hero"
+import { LiveTalks } from "./components/LiveTalks/LiveTalks"
 import { Marquee } from "./components/Marquee/Marquee"
 import { MarqueeContainerWrapper } from "./components/Marquee/Marquee.styled"
 import { Navbar } from "./components/Navbar/Navbar"
 import { Newsletter } from "./components/Newsletter/Newsletter"
+import { Partners } from "./components/Partners/Partners"
+import { Schedule } from "./components/Schedule/Schedule"
+import { VideoSection } from "./components/VideoSection"
 // CSS
 import "./css/global.css"
 import { config } from "./config"
@@ -64,11 +69,37 @@ const App = () => {
       <AppContainer>
         <Hero />
 
+        <Carousel />
+
         <MarqueeContainerWrapper>
           <Marquee />
         </MarqueeContainerWrapper>
 
         <About />
+
+        <MarqueeContainerWrapper>
+          <Marquee />
+        </MarqueeContainerWrapper>
+
+        <Schedule />
+
+        <MarqueeContainerWrapper>
+          <Marquee />
+        </MarqueeContainerWrapper>
+
+        <VideoSection />
+
+        <MarqueeContainerWrapper>
+          <Marquee />
+        </MarqueeContainerWrapper>
+
+        <LiveTalks />
+
+        <MarqueeContainerWrapper>
+          <Marquee />
+        </MarqueeContainerWrapper>
+
+        <Partners />
 
         <MarqueeContainerWrapper>
           <Marquee />
