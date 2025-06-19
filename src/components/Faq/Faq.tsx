@@ -1,7 +1,16 @@
 import { memo, useState } from "react"
-import { styled } from "styled-components"
 import arrowDown from "../../img/icons/arrow-down2.png"
-import { breakpoints, theme } from "../../utils/theme"
+import {
+  AnswerFaq,
+  ArrowFaq,
+  DivVerticalLineFaq,
+  LeftFaqContainer,
+  QuestionFaq,
+  QuestionFaqContainer,
+  RightFaqContainer,
+  SectionFaqContainer,
+  TitleFaq,
+} from "./Faq.styled"
 
 const Faq = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null)
@@ -151,146 +160,31 @@ const Faq = () => {
   ]
 
   return (
-    <SectionContainer id="faq">
-      <LeftContainer>
-        <Title>Frequently Asked Questions</Title>
-      </LeftContainer>
-      <DivVerticalLine />
-      <RightContainer>
+    <SectionFaqContainer id="faq">
+      <LeftFaqContainer>
+        <TitleFaq>Frequently Asked Questions</TitleFaq>
+      </LeftFaqContainer>
+      <DivVerticalLineFaq />
+      <RightFaqContainer>
         {questions.map((item, index) => (
-          <QuestionContainer key={index}>
-            <Question onClick={() => toggleAnswer(index)}>
+          <QuestionFaqContainer key={index}>
+            <QuestionFaq onClick={() => toggleAnswer(index)}>
               <p>{item.question}</p>
-              <Arrow
+              <ArrowFaq
                 src={arrowDown}
                 alt="arrow"
                 $isActive={activeIndex === index}
               />
-            </Question>
-            <Answer $isActive={activeIndex === index}>{item.answer()}</Answer>
-          </QuestionContainer>
+            </QuestionFaq>
+            <AnswerFaq $isActive={activeIndex === index}>
+              {item.answer()}
+            </AnswerFaq>
+          </QuestionFaqContainer>
         ))}
-      </RightContainer>
-    </SectionContainer>
+      </RightFaqContainer>
+    </SectionFaqContainer>
   )
 }
-
-const SectionContainer = styled.section`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  padding: 60px 20px;
-  background-color: ${theme.black};
-
-  @media (min-width: ${breakpoints.md}) {
-    padding: 80px 80px;
-  }
-
-  @media (min-width: ${breakpoints.l}) {
-    flex-direction: row;
-    padding: 100px 100px;
-    gap: 40px;
-  }
-
-  @media (min-width: ${breakpoints.xl}) {
-    padding: 100px 150px;
-  }
-
-  @media (min-width: ${breakpoints.xxl}) {
-    padding: 100px 200px;
-  }
-`
-
-const LeftContainer = styled.div`
-  width: 100%;
-  margin-bottom: 40px;
-
-  @media (min-width: ${breakpoints.l}) {
-    width: 30%;
-    margin-bottom: 0;
-  }
-`
-
-const RightContainer = styled.div`
-  width: 100%;
-  color: ${theme.white};
-
-  @media (min-width: ${breakpoints.l}) {
-    width: 70%;
-  }
-`
-
-const Title = styled.h2`
-  font-size: 40px;
-  font-weight: 900;
-  color: ${theme.white};
-  letter-spacing: 0.1em;
-`
-
-const QuestionContainer = styled.div`
-  border-top: 2px solid ${theme.white};
-  padding: 20px 0;
-
-  &:last-child {
-    border-bottom: 2px solid ${theme.white};
-  }
-`
-
-const Question = styled.div`
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-
-  p {
-    font-size: 24px;
-    font-weight: 700;
-    color: ${theme.white};
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-  }
-`
-
-const Answer = styled.div<{ $isActive: boolean }>`
-  max-height: ${(props) => (props.$isActive ? "1000px" : "0")};
-  opacity: ${(props) => (props.$isActive ? "1" : "0")};
-  margin-top: ${(props) => (props.$isActive ? "20px" : "0")};
-  overflow: hidden;
-  transition: all 0.3s ease-in-out;
-
-  p {
-    font-size: 18px;
-    color: ${theme.white};
-    font-weight: 500;
-  }
-
-  a {
-    text-decoration: underline !important;
-    color: blue;
-    text-underline-offset: 4px;
-    text-decoration-thickness: 1px;
-  }
-`
-
-const Arrow = styled.img<{ $isActive: boolean }>`
-  transition: all 0.3s ease-in-out;
-  height: 24px;
-  transform: ${(props) =>
-    props.$isActive ? "rotate(180deg)" : "rotate(0deg)"};
-`
-
-const DivVerticalLine = styled.div`
-  display: none;
-  width: 2px;
-  background-color: ${theme.white};
-  height: auto;
-  align-self: stretch;
-
-  @media (min-width: ${breakpoints.l}) {
-    display: block;
-  }
-`
 
 memo(Faq)
 export { Faq }
