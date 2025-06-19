@@ -1,23 +1,10 @@
-import { useEffect, useState } from "react"
 import { styled } from "styled-components"
+import { useResizePage } from "../../hooks/useResizePage"
 import { breakpoints, theme } from "../../utils/theme"
 
 const About = () => {
-  const [isMobile, setIsMobile] = useState(false)
+  const { isMobile } = useResizePage({ size: 992 })
 
-  useEffect(() => {
-    const handleResize = () => {
-      const mobileWidth = window.innerWidth < 992
-      setIsMobile(mobileWidth)
-    }
-
-    window.addEventListener("resize", handleResize)
-    handleResize()
-
-    return () => {
-      window.removeEventListener("resize", handleResize)
-    }
-  }, [])
   return (
     <AboutContainer id="about">
       {isMobile ? (
