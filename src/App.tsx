@@ -76,10 +76,6 @@ const App = () => {
 
         <About />
 
-        <MarqueeContainerWrapper>
-          <Marquee />
-        </MarqueeContainerWrapper>
-
         <VideoSection />
 
         <MarqueeContainerWrapper>
