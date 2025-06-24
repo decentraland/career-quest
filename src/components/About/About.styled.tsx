@@ -3,7 +3,8 @@ import { breakpoints, theme } from "../../utils/theme"
 
 const AboutContainer = styled.div`
   background-color: ${theme.black};
-  padding: 60px 20px;
+  // arriba, derecha, abajo, izquierda
+  padding: 60px 20px 40px 20px;
   width: 100%;
   height: 100%;
   display: flex;
@@ -12,14 +13,14 @@ const AboutContainer = styled.div`
   gap: 20px;
 
   @media (min-width: ${breakpoints.md}) {
-    padding: 80px 80px;
+    padding: 80px 80px 40px 80px;
   }
 
   @media (min-width: ${breakpoints.l}) {
     flex-direction: row;
     gap: 0px;
     align-items: stretch;
-    padding: 100px 20px;
+    padding: 100px 20px 40px 20px;
   }
 `
 

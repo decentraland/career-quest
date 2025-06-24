@@ -13,7 +13,6 @@ import { MarqueeContainerWrapper } from "./components/Marquee/Marquee.styled"
 import { Navbar } from "./components/Navbar/Navbar"
 import { Newsletter } from "./components/Newsletter/Newsletter"
 import { Partners } from "./components/Partners/Partners"
-import { Schedule } from "./components/Schedule/Schedule"
 import { VideoSection } from "./components/VideoSection"
 // CSS
 import "./css/global.css"
@@ -76,12 +75,6 @@ const App = () => {
         </MarqueeContainerWrapper>
 
         <About />
-
-        <MarqueeContainerWrapper>
-          <Marquee />
-        </MarqueeContainerWrapper>
-
-        <Schedule />
 
         <MarqueeContainerWrapper>
           <Marquee />
