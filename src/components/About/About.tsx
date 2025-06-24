@@ -1,4 +1,5 @@
 import { useResizePage } from "../../hooks/useResizePage"
+import { Schedule } from "../Schedule/Schedule"
 import {
   AboutContainer,
   DivVerticalLine,
@@ -11,45 +12,49 @@ const About = () => {
   const { isMobile } = useResizePage({ size: 992 })
 
   return (
-    <AboutContainer id="about">
-      {isMobile ? (
-        <TitleAboutSection>Launch your Web3 Career</TitleAboutSection>
-      ) : (
-        <div style={{ display: "flex", flexDirection: "column" }}>
-          <TitleAboutSection>Launch your</TitleAboutSection>
-          <TitleAboutSection>Web3 Career</TitleAboutSection>
-        </div>
-      )}
+    <>
+      <AboutContainer id="about">
+        {isMobile ? (
+          <TitleAboutSection>Launch your Web3 Career</TitleAboutSection>
+        ) : (
+          <div style={{ display: "flex", flexDirection: "column" }}>
+            <TitleAboutSection>Launch your</TitleAboutSection>
+            <TitleAboutSection>Web3 Career</TitleAboutSection>
+          </div>
+        )}
 
-      <DivVerticalLine />
+        <DivVerticalLine />
 
-      <ul style={{ padding: "0 20px", maxWidth: "600px" }}>
-        <LiAbout>
-          Explore <SpanAbout>2 days</SpanAbout> of interactive Web3 career
-          events
-        </LiAbout>
+        <ul style={{ padding: "0 20px", maxWidth: "600px" }}>
+          <LiAbout>
+            Explore <SpanAbout>2 days</SpanAbout> of interactive Web3 career
+            events
+          </LiAbout>
 
-        <LiAbout>
-          Attend <SpanAbout>8+</SpanAbout> workshops and expert sessions
-        </LiAbout>
+          <LiAbout>
+            Attend <SpanAbout>8+</SpanAbout> workshops and expert sessions
+          </LiAbout>
 
-        <LiAbout>
-          Join <SpanAbout>real-time challenges</SpanAbout> in the Career Quest
-          Game Arena
-        </LiAbout>
+          <LiAbout>
+            Join <SpanAbout>real-time challenges</SpanAbout> in the Career Quest
+            Game Arena
+          </LiAbout>
 
-        <LiAbout>
-          Connect with{" "}
-          <SpanAbout>Bondex, web3.career, Metana and SheFi</SpanAbout> for
-          hiring & training insights
-        </LiAbout>
+          <LiAbout>
+            Connect with{" "}
+            <SpanAbout>Bondex, web3.career, Metana and SheFi</SpanAbout> for
+            hiring & training insights
+          </LiAbout>
 
-        <LiAbout>
-          Win <SpanAbout>2 fully-funded</SpanAbout> Web3 bootcamps worth
-          $12,000+
-        </LiAbout>
-      </ul>
-    </AboutContainer>
+          <LiAbout>
+            Win <SpanAbout>2 fully-funded</SpanAbout> Web3 bootcamps worth
+            $12,000+
+          </LiAbout>
+        </ul>
+      </AboutContainer>
+
+      <Schedule />
+    </>
   )
 }
 

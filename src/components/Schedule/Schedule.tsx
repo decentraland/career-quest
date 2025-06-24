@@ -1,44 +1,37 @@
 import { ScheduleTabs } from "./ScheduleTabs"
+import { useResizePage } from "../../hooks/useResizePage"
+import { DivVerticalLine } from "../About/About.styled"
 import { JumpInBtn } from "../JumpInBtn/JumpInBtn"
-import { ScheduleSectionContainer } from "./Schedule.styled"
+import { ScheduleContainer, TitleSchedule } from "./Schedule.styled"
 
 const Schedule = () => {
+  const { isMobile } = useResizePage({ size: 992 })
+
   return (
-    <ScheduleSectionContainer id="schedule">
-      <div className="schedule-container">
-        <h2>
-          <span>Enter</span> <span>Decentraland</span> <span>APRIL 9 - 12</span>
-        </h2>
-        <ul className="schedule-list">
-          <li>
-            Experience <b>4</b> days of exclusive fashion and 8 live VIP talks
-          </li>
-          <li>
-            Be front row for <b>6</b> iconic runway shows
-          </li>
-          <li>
-            Explore <b>16</b> designer showrooms
-          </li>
-          <li>
-            Claim <b>22+</b> free digital fashion collectibles
-          </li>
-        </ul>
-      </div>
-      <div className="schedule-tabs-section-container">
-        <div className="schedule-tabs-section-left">
-          <h3>Schedule</h3>
-          <span className="download-btn-container">
+    <ScheduleContainer id="schedule">
+      {isMobile ? (
+        <ScheduleTabs />
+      ) : (
+        <>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              gap: "20px",
+            }}
+          >
+            <TitleSchedule>Schedule</TitleSchedule>
+
             <JumpInBtn />
-          </span>
-        </div>
-        <div className="schedule-tabs-container">
+          </div>
+
+          <DivVerticalLine />
+
           <ScheduleTabs />
-        </div>
-      </div>
-      <div className="download-btn-container">
-        <JumpInBtn />
-      </div>
-    </ScheduleSectionContainer>
+        </>
+      )}
+    </ScheduleContainer>
   )
 }
 

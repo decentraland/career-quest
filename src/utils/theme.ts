@@ -16,6 +16,7 @@ const basicPalette = {
   orange: "#ffa25a",
   grayPearl: "#ecebed",
   charcoalGray: "#424040",
+  customBlack: "#0F1317",
 }
 
 const expandedPalette = {
@@ -28,6 +29,7 @@ const expandedPalette = {
   grey300: () => lighten(0.5, basicPalette.black),
   grey100: () => lighten(0.1, basicPalette.black),
   darkGray600: () => lighten(0.15, basicPalette.darkGray),
+  customBlack600: () => lighten(0.1, basicPalette.customBlack),
 }
 
 const theme = {
