@@ -1,9 +1,13 @@
 import { styled } from "styled-components"
+import partnersBackground from "../../img/partners/partners-background.png"
 import { breakpoints, theme } from "../../utils/theme"
 
 const PartnersContainer = styled.div`
   background-color: ${theme.black};
-  padding: 60px 20px;
+  background-image: url(${partnersBackground});
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 40px 20px;
   width: 100%;
   height: 100%;
   display: flex;
@@ -13,22 +17,50 @@ const PartnersContainer = styled.div`
   gap: 20px;
 
   @media (min-width: ${breakpoints.md}) {
-    padding: 80px 80px;
+    padding: 80px 20px;
   }
 
   @media (min-width: ${breakpoints.l}) {
     flex-direction: row;
     gap: 0px;
-    align-items: stretch;
-    padding: 100px 250px;
+    padding: 100px 80px;
+  }
+`
+
+const PartnerContainerLeft = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: ${breakpoints.l}) {
+    justify-content: flex-end;
+    width: 40%;
+  }
+`
+
+const PartnerContainerRight = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  @media (min-width: ${breakpoints.l}) {
+    justify-content: flex-start;
+    width: 60%;
   }
 `
 
 const TitlePartnersSection = styled.h2`
-  font-size: 40px;
+  font-size: 24px;
   font-weight: 900;
   color: ${theme.white};
   letter-spacing: 0.1em;
+
+  @media (min-width: ${breakpoints.md}) {
+    font-size: 40px;
+  }
 `
 
 const DivVerticalLinePartners = styled.div`
@@ -44,32 +76,17 @@ const DivVerticalLinePartners = styled.div`
   }
 `
 
-const PartnersImgContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-
-  @media (min-width: ${breakpoints.md}) {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-`
-
 const ImgPartner = styled.div`
-  width: 251px;
-  height: 251px;
+  width: 160px;
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
-
   /* border: 1px solid red; */
 
   img {
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: contain;
   }
 `
@@ -93,9 +110,10 @@ const SocialMediaItem = styled.div`
 
 export {
   PartnersContainer,
+  PartnerContainerLeft,
+  PartnerContainerRight,
   TitlePartnersSection,
   DivVerticalLinePartners,
-  PartnersImgContainer,
   ImgPartner,
   SocialMediaContainer,
   SocialMediaItem,
