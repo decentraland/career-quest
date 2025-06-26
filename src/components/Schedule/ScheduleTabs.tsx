@@ -11,7 +11,7 @@ import {
 const ScheduleTabs = () => {
   const [activeTab, setActiveTab] = useState(0)
 
-  const days = ["DAY 1", "DAY 2", "DAY 3", "DAY 4"]
+  const days = ["DAY 1", "DAY 2"]
 
   return (
     <TabsScheduleContainer>
@@ -40,131 +40,6 @@ const renderContent = (activeTab: number) => {
         <ScheduleList>
           <ScheduleListItem>
             <div>
-              <span className="first-span">05:00pm UTC</span>
-
-              <span className="first-span">10:00am PST</span>
-            </div>
-
-            <span className="first-span tablet-span">
-              05:00pm UTC 10:00am PST
-            </span>
-
-            <span className="second-span">
-              Five Years of Virtual Fashion <b>LIVE TALK</b>
-            </span>
-          </ScheduleListItem>
-          <ScheduleListItem>
-            <div>
-              <span className="first-span">06:00pm UTC</span>
-
-              <span className="first-span">11:00am PST</span>
-            </div>
-
-            <span className="first-span tablet-span">
-              06:00pm UTC 11:00am PST
-            </span>
-
-            <span className="second-span">
-              Roustan <b>RUNWAY</b>
-            </span>
-          </ScheduleListItem>
-          <ScheduleListItem>
-            <div>
-              <span className="first-span">08:00pm UTC</span>
-
-              <span className="first-span">01:00pm PST</span>
-            </div>
-
-            <span className="first-span tablet-span">
-              08:00pm UTC 01:00pm PST
-            </span>
-
-            <span className="second-span">
-              Virtual Identities <b>LIVE TALK</b>
-            </span>
-          </ScheduleListItem>
-          <ScheduleListItem>
-            <div>
-              <span className="first-span">09:00pm UTC</span>
-
-              <span className="first-span">02:00pm PST</span>
-            </div>
-
-            <span className="first-span tablet-span">
-              09:00pm UTC 02:00pm PST
-            </span>
-
-            <span className="second-span">
-              Winners of The Banners We Wear <b>RUNWAY</b>
-            </span>
-          </ScheduleListItem>
-          <ScheduleListItem>
-            <div>
-              <span className="first-span">10:00pm UTC</span>
-
-              <span className="first-span">03:00pm PST</span>
-            </div>
-
-            <span className="first-span tablet-span">
-              10:00pm UTC 03:00pm PST
-            </span>
-
-            <span className="second-span">
-              Opening Party with <b>Marc Romboy</b>
-            </span>
-          </ScheduleListItem>
-        </ScheduleList>
-      )
-    case 1:
-      return (
-        <ScheduleList>
-          <ScheduleListItem>
-            <div>
-              <span className="first-span">Midnight UTC</span>
-
-              <span className="first-span">05:00pm PST</span>
-            </div>
-
-            <span className="first-span tablet-span">
-              Midnight UTC 05:00pm PST
-            </span>
-
-            <span className="second-span">
-              Five Years of Virtual Fashion (Repeat Talk)
-            </span>
-          </ScheduleListItem>
-          <ScheduleListItem>
-            <div>
-              <span className="first-span">01:00am UTC</span>
-
-              <span className="first-span">06:00pm PST</span>
-            </div>
-
-            <span className="first-span tablet-span">
-              01:00am UTC 06:00pm PST
-            </span>
-
-            <span className="second-span">
-              Winners of The Banners We Wear <b> RUNWAY</b>
-            </span>
-          </ScheduleListItem>
-          <ScheduleListItem>
-            <div>
-              <span className="first-span">02:00am UTC</span>
-
-              <span className="first-span">07:00pm PST</span>
-            </div>
-
-            <span className="first-span tablet-span">
-              02:00am UTC 07:00pm PST
-            </span>
-
-            <span className="second-span">
-              Virtual Identities (Repeat Talk)
-            </span>
-          </ScheduleListItem>
-          <ScheduleListItem>
-            <div>
               <span className="first-span">11:00am UTC</span>
 
               <span className="first-span">04:00am PST</span>
@@ -175,357 +50,366 @@ const renderContent = (activeTab: number) => {
             </span>
 
             <span className="second-span">
-              Decentraland Japan <b>RUNWAY</b>
+              The 101 on Decentraland Career Quest: Win a Career-Changing
+              Bootcamp!
             </span>
           </ScheduleListItem>
+
           <ScheduleListItem>
             <div>
-              <span className="first-span">05:00pm UTC</span>
+              <span className="first-span">Midday UTC</span>
 
-              <span className="first-span">10:00 am PST</span>
+              <span className="first-span">05:00am PST</span>
             </div>
 
             <span className="first-span tablet-span">
-              05:00pm UTC 10:00 am PST
+              Midday UTC 05:00am PST
             </span>
 
             <span className="second-span">
-              Gaming x Fashion <b>LIVE TALK</b>
+              Web3 Jobs Decoded: Where the Opportunities Are in 2025
             </span>
           </ScheduleListItem>
+
           <ScheduleListItem>
             <div>
-              <span className="first-span">06:00pm UTC</span>
+              <span className="first-span">01:00pm UTC</span>
 
-              <span className="first-span">11:00 am PST</span>
+              <span className="first-span">06:00am PST</span>
             </div>
 
             <span className="first-span tablet-span">
-              06:00pm UTC 11:00 am PST
+              01:00pm UTC 06:00am PST
             </span>
 
             <span className="second-span">
-              Cyberdog <b>RUNWAY</b>
+              Careers in <b>Product Management</b>: What I Wish I’d Known
             </span>
           </ScheduleListItem>
+
           <ScheduleListItem>
             <div>
-              <span className="first-span">07:00pm UTC</span>
+              <span className="first-span">02:00pm UTC</span>
 
-              <span className="first-span">Midday PST</span>
+              <span className="first-span">07:00am PST</span>
             </div>
 
             <span className="first-span tablet-span">
-              07:00pm UTC Midday PST
+              02:00pm UTC 07:00am PST
             </span>
 
-            <span className="second-span">The WIP Meetup at MVFW</span>
+            <span className="second-span">
+              Resume Skills for Web3: How to Build a CV That Gets Attention
+            </span>
           </ScheduleListItem>
+
+          <ScheduleListItem>
+            <div>
+              <span className="first-span">03:00pm UTC</span>
+
+              <span className="first-span">08:00am PST</span>
+            </div>
+
+            <span className="first-span tablet-span">
+              03:00pm UTC 08:00am PST
+            </span>
+
+            <span className="second-span">
+              Careers in <b>Dev Rel & Support</b>: What I Wish I’d Known
+            </span>
+          </ScheduleListItem>
+
+          <ScheduleListItem>
+            <div>
+              <span className="first-span">04:00pm UTC</span>
+
+              <span className="first-span">09:00am PST</span>
+            </div>
+
+            <span className="first-span tablet-span">
+              04:00pm UTC 09:00am PST
+            </span>
+
+            <span className="second-span">
+              Web3 Knowledge <b>Tournament</b>
+            </span>
+          </ScheduleListItem>
+
           <ScheduleListItem>
             <div>
               <span className="first-span">09:00pm UTC</span>
 
-              <span className="first-span">02:00pm PST</span>
+              <span className="first-span">04:00am PST</span>
             </div>
 
             <span className="first-span tablet-span">
-              09:00pm UTC 02:00pm PST
+              09:00pm UTC 04:00am PST
             </span>
 
             <span className="second-span">
-              Wearables Around The World <b>RUNWAY</b>
+              Ghosted Again? How to Handle Rejection in Web3 Job Hunting
             </span>
           </ScheduleListItem>
+
           <ScheduleListItem>
             <div>
               <span className="first-span">10:00pm UTC</span>
 
-              <span className="first-span">03:00pm PST</span>
+              <span className="first-span">04:00am PST</span>
             </div>
 
             <span className="first-span tablet-span">
-              10:00pm UTC 03:00pm PST
+              10:00pm UTC 04:00am PST
             </span>
 
             <span className="second-span">
-              Co-creating with AI <b>LIVE TALK</b>
+              Pitch Yourself in Web3: How to Stand Out to Startups, Protocols &
+              Recruiters
             </span>
           </ScheduleListItem>
-        </ScheduleList>
-      )
-    case 2:
-      return (
-        <ScheduleList>
+
+          <ScheduleListItem>
+            <div>
+              <span className="first-span">11:00pm UTC</span>
+
+              <span className="first-span">04:00am PST</span>
+            </div>
+
+            <span className="first-span tablet-span">
+              11:00pm UTC 04:00am PST
+            </span>
+
+            <span className="second-span">
+              Careers in <b>Marketing</b>: What I Wish I’d Known
+            </span>
+          </ScheduleListItem>
+
           <ScheduleListItem>
             <div>
               <span className="first-span">Midnight UTC</span>
 
-              <span className="first-span">05:00pm PST</span>
+              <span className="first-span">04:00am PST</span>
             </div>
 
             <span className="first-span tablet-span">
-              01:00am UTC 06:00pm PST
+              Midnight UTC 04:00am PST
             </span>
 
-            <span className="second-span">Gaming x Fashion (Repeat Talk)</span>
+            <span className="second-span">
+              Meet the Teams from web3.career & Decentraland Foundation
+            </span>
           </ScheduleListItem>
+
           <ScheduleListItem>
             <div>
               <span className="first-span">01:00am UTC</span>
 
-              <span className="first-span">06:00pm PST</span>
+              <span className="first-span">04:00am PST</span>
             </div>
 
             <span className="first-span tablet-span">
-              02:00am UTC 07:00pm PST
+              01:00am UTC 04:00am PST
             </span>
 
             <span className="second-span">
-              Cyberdog <b>RUNWAY</b>
+              Careers in <b>Community Building</b>: What I Wish I’d Known
             </span>
           </ScheduleListItem>
+
           <ScheduleListItem>
             <div>
               <span className="first-span">02:00am UTC</span>
 
-              <span className="first-span">07:00pm PST</span>
+              <span className="first-span">04:00am PST</span>
             </div>
 
             <span className="first-span tablet-span">
-              03:00am UTC 08:00pm PST
+              02:00am UTC 04:00am PST
             </span>
 
             <span className="second-span">
-              Wearables Around The World (Repeat Talk)
+              Web3 Knowledge <b>Tournament</b>
             </span>
-          </ScheduleListItem>
-          <ScheduleListItem>
-            <div>
-              <span className="first-span">03:00am UTC</span>
-
-              <span className="first-span">08:00pm PST</span>
-            </div>
-
-            <span className="first-span tablet-span">
-              3:00pm UTC 8:00 am PST
-            </span>
-
-            <span className="second-span">
-              Co-creating with AI (Repeat Talk)
-            </span>
-          </ScheduleListItem>
-          <ScheduleListItem>
-            <div>
-              <span className="first-span">3:00pm UTC</span>
-
-              <span className="first-span">8:00 am PST</span>
-            </div>
-
-            <span className="second-span">
-              Avatares y Cultura <b>LIVE TALK</b>
-            </span>
-          </ScheduleListItem>
-          <ScheduleListItem>
-            <div>
-              <span className="first-span">05:00pm UTC</span>
-
-              <span className="first-span">10:00am PST</span>
-            </div>
-
-            <span className="first-span tablet-span">
-              05:00pm UTC 10:00am PST
-            </span>
-
-            <span className="second-span">
-              Digital Streewtear <b>LIVE TALK</b>
-            </span>
-          </ScheduleListItem>
-          <ScheduleListItem>
-            <div>
-              <span className="first-span">06:00pm UTC</span>
-
-              <span className="first-span">11:00am PST</span>
-            </div>
-
-            <span className="first-span tablet-span">
-              06:00pm UTC 11:00am PST
-            </span>
-
-            <span className="second-span">
-              Free The Youth <b>RUNWAY</b>
-            </span>
-          </ScheduleListItem>
-          <ScheduleListItem>
-            <div>
-              <span className="first-span">07:00pm UTC</span>
-
-              <span className="first-span">12:00pm PST</span>
-            </div>
-
-            <span className="first-span tablet-span">
-              07:00pm UTC 12:00pm PST
-            </span>
-
-            <span className="second-span">
-              Future Retail <b>LIVE TALK</b>
-            </span>
-          </ScheduleListItem>
-          <ScheduleListItem>
-            <div>
-              <span className="first-span">08:00pm UTC</span>
-
-              <span className="first-span">01:00pm PST</span>
-            </div>
-
-            <span className="first-span tablet-span">
-              08:00pm UTC 01:00pm PST
-            </span>
-
-            <span className="second-span">Fashion Film Screenings</span>
           </ScheduleListItem>
         </ScheduleList>
       )
-    case 3:
+    case 1:
       return (
         <ScheduleList>
           <ScheduleListItem>
             <div>
-              <span className="first-span">Midnight UTC</span>
+              <span className="first-span">Midday UTC</span>
 
-              <span className="first-span">01:00pm PST</span>
+              <span className="first-span">05:00am PST</span>
             </div>
 
             <span className="first-span tablet-span">
-              Midnight UTC 01:00pm PST
+              Midday UTC 05:00am PST
             </span>
 
             <span className="second-span">
-              Avatares y Cultura (Repeat Talk)
+              Pitch Yourself in Web3: How to Stand Out to Startups, Protocols &
+              Recruiters
             </span>
           </ScheduleListItem>
+
+          <ScheduleListItem>
+            <div>
+              <span className="first-span">01:00pm UTC</span>
+
+              <span className="first-span">06:00am PST</span>
+            </div>
+
+            <span className="first-span tablet-span">
+              01:00pm UTC 06:00am PST
+            </span>
+
+            <span className="second-span">
+              Careers in <b>Marketing</b>: What I Wish I’d Known
+            </span>
+          </ScheduleListItem>
+
+          <ScheduleListItem>
+            <div>
+              <span className="first-span">02:00pm UTC</span>
+
+              <span className="first-span">07:00am PST</span>
+            </div>
+
+            <span className="first-span tablet-span">
+              02:00pm UTC 07:00am PST
+            </span>
+
+            <span className="second-span">
+              Meet the Team from <b>Metana & Decentraland Foundation</b>
+            </span>
+          </ScheduleListItem>
+
+          <ScheduleListItem>
+            <div>
+              <span className="first-span">03:00pm UTC</span>
+
+              <span className="first-span">08:00am PST</span>
+            </div>
+
+            <span className="first-span tablet-span">
+              03:00pm UTC 08:00am PST
+            </span>
+
+            <span className="second-span">
+              Careers in <b>Community Building</b>: What I Wish I’d Known
+            </span>
+          </ScheduleListItem>
+
+          <ScheduleListItem>
+            <div>
+              <span className="first-span">04:00pm UTC</span>
+
+              <span className="first-span">09:00 am PST</span>
+            </div>
+
+            <span className="first-span tablet-span">
+              04:00pm UTC 09:00 am PST
+            </span>
+
+            <span className="second-span">
+              Web3 Knowledge <b>Tournament</b>
+            </span>
+          </ScheduleListItem>
+
+          <ScheduleListItem>
+            <div>
+              <span className="first-span">09:00pm UTC</span>
+
+              <span className="first-span">04:00 am PST</span>
+            </div>
+
+            <span className="first-span tablet-span">
+              04:00pm UTC 04:00 am PST
+            </span>
+
+            <span className="second-span">
+              Careers in <b>Virtual Worlds</b>: What I Wish I’d Known
+            </span>
+          </ScheduleListItem>
+
+          <ScheduleListItem>
+            <div>
+              <span className="first-span">10:00pm UTC</span>
+
+              <span className="first-span">04:00am PST</span>
+            </div>
+
+            <span className="first-span tablet-span">
+              09:00pm UTC 04:00am PST
+            </span>
+
+            <span className="second-span">
+              Web3 Jobs Decoded: Where the Opportunities Are in 2025
+            </span>
+          </ScheduleListItem>
+
+          <ScheduleListItem>
+            <div>
+              <span className="first-span">11:00pm UTC</span>
+
+              <span className="first-span">04:00am PST</span>
+            </div>
+
+            <span className="first-span tablet-span">
+              11:00pm UTC 04:00am PST
+            </span>
+
+            <span className="second-span">
+              Careers in <b>Product Management</b>: What I Wish I’d Known
+            </span>
+          </ScheduleListItem>
+
+          <ScheduleListItem>
+            <div>
+              <span className="first-span">Midnight UTC</span>
+
+              <span className="first-span">04:00am PST</span>
+            </div>
+
+            <span className="first-span tablet-span">
+              Midnight UTC 04:00am PST
+            </span>
+
+            <span className="second-span">
+              Resume Skills for Web3: How to Build a CV That Gets Attention
+            </span>
+          </ScheduleListItem>
+
           <ScheduleListItem>
             <div>
               <span className="first-span">01:00am UTC</span>
 
-              <span className="first-span">06:00pm PST</span>
+              <span className="first-span">04:00am PST</span>
             </div>
 
             <span className="first-span tablet-span">
-              01:00am UTC 06:00pm PST
+              01:00am UTC 04:00am PST
             </span>
 
             <span className="second-span">
-              Digital Streetwear (Repeat Talk)
+              Careers in <b>Dev Rel & Support</b>: What I Wish I’d Known
             </span>
           </ScheduleListItem>
+
           <ScheduleListItem>
             <div>
               <span className="first-span">02:00am UTC</span>
 
-              <span className="first-span">07:00pm PST</span>
+              <span className="first-span">04:00am PST</span>
             </div>
 
             <span className="first-span tablet-span">
-              02:00am UTC 07:00pm PST
+              02:00am UTC 04:00am PST
             </span>
 
             <span className="second-span">
-              Free The Youth <b>RUNWAY</b>
-            </span>
-          </ScheduleListItem>
-          <ScheduleListItem>
-            <div>
-              <span className="first-span">03:00am UTC</span>
-
-              <span className="first-span">08:00pm PST</span>
-            </div>
-
-            <span className="first-span tablet-span">
-              03:00am UTC 08:00pm PST
-            </span>
-
-            <span className="second-span">Future Retail (Repeat Talk)</span>
-          </ScheduleListItem>
-          <ScheduleListItem>
-            <div>
-              <span className="first-span">04:00am UTC</span>
-
-              <span className="first-span">09:00pm PST</span>
-            </div>
-
-            <span className="second-span">Fashion Film Screenings</span>
-          </ScheduleListItem>
-          <ScheduleListItem>
-            <div>
-              <span className="first-span">05:00pm UTC</span>
-
-              <span className="first-span">10:00am PST</span>
-            </div>
-
-            <span className="first-span tablet-span">
-              05:00pm UTC 10:00am PST
-            </span>
-
-            <span className="second-span">
-              Cyberdog <b>RUNWAY</b>
-            </span>
-          </ScheduleListItem>
-          <ScheduleListItem>
-            <div>
-              <span className="first-span">06:00pm UTC</span>
-
-              <span className="first-span">11:00pm PST</span>
-            </div>
-
-            <span className="first-span tablet-span">
-              06:00pm UTC 11:00pm PST
-            </span>
-
-            <span className="second-span">
-              Free The Youth <b>RUNWAY</b>
-            </span>
-          </ScheduleListItem>
-          <ScheduleListItem>
-            <div>
-              <span className="first-span">07:00pm UTC</span>
-
-              <span className="first-span">12:00pm PST</span>
-            </div>
-
-            <span className="first-span tablet-span">
-              07:00pm UTC 12:00pm PST
-            </span>
-
-            <span className="second-span">
-              The Banners We Wear <b>RUNWAY</b>
-            </span>
-          </ScheduleListItem>
-          <ScheduleListItem>
-            <div>
-              <span className="first-span">08:00pm UTC</span>
-
-              <span className="first-span">05:00pm PST</span>
-            </div>
-
-            <span className="first-span tablet-span">
-              08:00pm UTC 05:00pm PST
-            </span>
-
-            <span className="second-span">Fashion Film Screenings</span>
-          </ScheduleListItem>
-          <ScheduleListItem>
-            <div>
-              <span className="first-span">Midnight UTC</span>
-
-              <span className="first-span">5:00pm PST</span>
-            </div>
-
-            <span className="first-span tablet-span">
-              Midnight UTC 5:00pm PST
-            </span>
-
-            <span className="second-span">
-              Closing Party with <b>Coppola</b>
+              Web3 Knowledge <b>Tournament</b>
             </span>
           </ScheduleListItem>
         </ScheduleList>

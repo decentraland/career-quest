@@ -70,10 +70,6 @@ const App = () => {
 
         <Carousel />
 
-        <MarqueeContainerWrapper>
-          <Marquee />
-        </MarqueeContainerWrapper>
-
         <About />
 
         <VideoSection />
