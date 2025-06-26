@@ -1,7 +1,8 @@
 import { useResizePage } from "../../hooks/useResizePage"
-import { Schedule } from "../Schedule/Schedule"
 import {
   AboutContainer,
+  AboutContainerLeft,
+  AboutContainerRight,
   DivVerticalLine,
   LiAbout,
   SpanAbout,
@@ -9,22 +10,24 @@ import {
 } from "./About.styled"
 
 const About = () => {
-  const { isMobile } = useResizePage({ size: 992 })
+  const { isMobile } = useResizePage({ size: 768 })
 
   return (
-    <>
-      <AboutContainer id="about">
-        {isMobile ? (
-          <TitleAboutSection>Launch your Web3 Career</TitleAboutSection>
-        ) : (
+    <AboutContainer id="about">
+      {isMobile ? (
+        <TitleAboutSection>Launch your Web3 Career</TitleAboutSection>
+      ) : (
+        <AboutContainerLeft>
           <div style={{ display: "flex", flexDirection: "column" }}>
             <TitleAboutSection>Launch your</TitleAboutSection>
             <TitleAboutSection>Web3 Career</TitleAboutSection>
           </div>
-        )}
 
-        <DivVerticalLine />
+          <DivVerticalLine />
+        </AboutContainerLeft>
+      )}
 
+      <AboutContainerRight>
         <ul style={{ padding: "0 20px", maxWidth: "600px" }}>
           <LiAbout>
             Explore <SpanAbout>2 days</SpanAbout> of interactive Web3 career
@@ -51,10 +54,8 @@ const About = () => {
             $12,000+
           </LiAbout>
         </ul>
-      </AboutContainer>
-
-      <Schedule />
-    </>
+      </AboutContainerRight>
+    </AboutContainer>
   )
 }
 

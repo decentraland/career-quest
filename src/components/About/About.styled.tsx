@@ -4,7 +4,7 @@ import { breakpoints, theme } from "../../utils/theme"
 const AboutContainer = styled.div`
   background-color: ${theme.black};
   // arriba, derecha, abajo, izquierda
-  padding: 60px 20px 40px 20px;
+  padding: 40px 20px 20px 20px;
   width: 100%;
   height: 100%;
   display: flex;
@@ -12,15 +12,40 @@ const AboutContainer = styled.div`
   justify-content: center;
   gap: 20px;
 
-  @media (min-width: ${breakpoints.md}) {
-    padding: 80px 80px 40px 80px;
-  }
+  /* @media (min-width: ${breakpoints.md}) {
+    padding: 80px 20px 40px 20px;
+  } */
 
-  @media (min-width: ${breakpoints.l}) {
+  @media (min-width: ${breakpoints.md}) {
     flex-direction: row;
     gap: 0px;
     align-items: stretch;
-    padding: 100px 20px 40px 20px;
+    padding: 100px 60px 50px 60px;
+  }
+`
+
+const AboutContainerLeft = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+
+  @media (min-width: ${breakpoints.md}) {
+    justify-content: flex-end;
+    width: 40%;
+  }
+`
+
+const AboutContainerRight = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  @media (min-width: ${breakpoints.md}) {
+    width: 60%;
+    justify-content: flex-start;
   }
 `
 
@@ -29,6 +54,11 @@ const TitleAboutSection = styled.h2`
   font-weight: 900;
   color: ${theme.white};
   letter-spacing: 0.1em;
+  text-align: center;
+
+  @media (min-width: ${breakpoints.md}) {
+    text-align: right;
+  }
 `
 
 const DivVerticalLine = styled.div`
@@ -39,7 +69,7 @@ const DivVerticalLine = styled.div`
   height: auto;
   align-self: stretch;
 
-  @media (min-width: ${breakpoints.l}) {
+  @media (min-width: ${breakpoints.md}) {
     display: block;
   }
 `
@@ -62,6 +92,8 @@ const SpanAbout = styled.span`
 
 export {
   AboutContainer,
+  AboutContainerLeft,
+  AboutContainerRight,
   DivVerticalLine,
   LiAbout,
   SpanAbout,
