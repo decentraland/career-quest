@@ -23,7 +23,7 @@ const PartnersContainer = styled.div`
   @media (min-width: ${breakpoints.l}) {
     flex-direction: row;
     gap: 0px;
-    padding: 100px 80px;
+    padding: 100px 60px;
   }
 `
 
@@ -47,8 +47,8 @@ const PartnerContainerRight = styled.div`
   gap: 20px;
 
   @media (min-width: ${breakpoints.l}) {
-    justify-content: flex-start;
     width: 60%;
+    justify-content: flex-start;
   }
 `
 

@@ -4,18 +4,43 @@ import { breakpoints, theme } from "../../utils/theme"
 const ScheduleContainer = styled.div`
   background-color: ${theme.black};
   // arriba, derecha, abajo, izquierda
-  padding: 0px 20px 60px 20px;
+  padding: 20px 20px 40px 20px;
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
 
   @media (min-width: ${breakpoints.md}) {
-    padding: 0px 80px 60px 80px;
+    padding: 40px 20px 80px 20px;
   }
 
   @media (min-width: ${breakpoints.l}) {
-    padding: 0px 20px 100px 20px;
+    padding: 50px 60px 100px 60px;
+  }
+`
+
+const ScheduleContainerLeft = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+
+  @media (min-width: ${breakpoints.l}) {
+    justify-content: flex-end;
+    width: 40%;
+  }
+`
+
+const ScheduleContainerRight = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  @media (min-width: ${breakpoints.l}) {
+    width: 60%;
+    justify-content: flex-start;
   }
 `
 
@@ -163,4 +188,6 @@ export {
   TabScheduleContent,
   ScheduleList,
   ScheduleListItem,
+  ScheduleContainerLeft,
+  ScheduleContainerRight,
 }

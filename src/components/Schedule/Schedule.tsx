@@ -2,7 +2,12 @@ import { ScheduleTabs } from "./ScheduleTabs"
 import { useResizePage } from "../../hooks/useResizePage"
 import { DivVerticalLine } from "../About/About.styled"
 import { JumpInBtn } from "../JumpInBtn/JumpInBtn"
-import { ScheduleContainer, TitleSchedule } from "./Schedule.styled"
+import {
+  ScheduleContainer,
+  ScheduleContainerLeft,
+  ScheduleContainerRight,
+  TitleSchedule,
+} from "./Schedule.styled"
 
 const Schedule = () => {
   const { isMobile } = useResizePage({ size: 992 })
@@ -13,22 +18,26 @@ const Schedule = () => {
         <ScheduleTabs />
       ) : (
         <>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              gap: "20px",
-            }}
-          >
-            <TitleSchedule>Schedule</TitleSchedule>
+          <ScheduleContainerLeft>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "flex-end",
+                gap: "20px",
+              }}
+            >
+              <TitleSchedule>Schedule</TitleSchedule>
 
-            <JumpInBtn />
-          </div>
+              <JumpInBtn />
+            </div>
 
-          <DivVerticalLine />
+            <DivVerticalLine />
+          </ScheduleContainerLeft>
 
-          <ScheduleTabs />
+          <ScheduleContainerRight>
+            <ScheduleTabs />
+          </ScheduleContainerRight>
         </>
       )}
     </ScheduleContainer>
