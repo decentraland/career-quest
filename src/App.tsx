@@ -13,7 +13,6 @@ import { MarqueeContainerWrapper } from "./components/Marquee/Marquee.styled"
 import { Navbar } from "./components/Navbar/Navbar"
 import { Newsletter } from "./components/Newsletter/Newsletter"
 import { Partners } from "./components/Partners/Partners"
-import { VideoSection } from "./components/VideoSection"
 // CSS
 import "./css/global.css"
 import { config } from "./config"
@@ -72,19 +71,17 @@ const App = () => {
 
         <About />
 
-        <VideoSection />
+        <MarqueeContainerWrapper>
+          <Marquee />
+        </MarqueeContainerWrapper>
+
+        <Partners />
 
         <MarqueeContainerWrapper>
           <Marquee />
         </MarqueeContainerWrapper>
 
         <LiveTalks />
-
-        <MarqueeContainerWrapper>
-          <Marquee />
-        </MarqueeContainerWrapper>
-
-        <Partners />
 
         <MarqueeContainerWrapper>
           <Marquee />

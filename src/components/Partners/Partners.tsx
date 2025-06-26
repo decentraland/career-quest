@@ -5,11 +5,13 @@ import glitter from "../../img/icons/glitter.png"
 import hIcon from "../../img/icons/h-icon.png"
 import bondex from "../../img/partners/bondex.png"
 import metana from "../../img/partners/metana.png"
+import shefi from "../../img/partners/shefi.png"
 import {
   DivVerticalLinePartners,
   ImgPartner,
+  PartnerContainerLeft,
+  PartnerContainerRight,
   PartnersContainer,
-  PartnersImgContainer,
   SocialMediaContainer,
   SocialMediaItem,
   TitlePartnersSection,
@@ -23,44 +25,48 @@ const Partners = () => {
       {isMobile ? (
         <TitlePartnersSection>Partners</TitlePartnersSection>
       ) : (
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-            gap: "20px",
-          }}
-        >
-          <TitlePartnersSection>Partners</TitlePartnersSection>
+        <PartnerContainerLeft>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: "20px",
+            }}
+          >
+            <TitlePartnersSection>Partners</TitlePartnersSection>
 
-          <SocialMediaContainer>
-            <SocialMediaItem>
-              <img src={glitter} alt="glitter" />
-            </SocialMediaItem>
-            <SocialMediaItem>
-              <img src={flower} alt="flower" />
-            </SocialMediaItem>
-            <SocialMediaItem>
-              <img src={comment} alt="comment" />
-            </SocialMediaItem>
-            <SocialMediaItem>
-              <img src={hIcon} alt="h-icon" />
-            </SocialMediaItem>
-          </SocialMediaContainer>
-        </div>
+            <SocialMediaContainer>
+              <SocialMediaItem>
+                <img src={glitter} alt="glitter" />
+              </SocialMediaItem>
+              <SocialMediaItem>
+                <img src={flower} alt="flower" />
+              </SocialMediaItem>
+              <SocialMediaItem>
+                <img src={comment} alt="comment" />
+              </SocialMediaItem>
+              <SocialMediaItem>
+                <img src={hIcon} alt="h-icon" />
+              </SocialMediaItem>
+            </SocialMediaContainer>
+          </div>
+          <DivVerticalLinePartners />
+        </PartnerContainerLeft>
       )}
 
-      <DivVerticalLinePartners />
-
-      <PartnersImgContainer>
+      <PartnerContainerRight>
         <ImgPartner>
           <img src={bondex} alt="bondex" />
         </ImgPartner>
         <ImgPartner>
+          <img src={shefi} alt="shefi" />
+        </ImgPartner>
+        <ImgPartner>
           <img src={metana} alt="metana" />
         </ImgPartner>
-      </PartnersImgContainer>
+      </PartnerContainerRight>
     </PartnersContainer>
   )
 }
