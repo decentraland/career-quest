@@ -41,20 +41,16 @@ const ExpertWorkshopsContainerLeft = styled.div`
 
 const ExpertWorkshopsContainerRight = styled.div`
   width: 100%;
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 40px;
 
-  @media (min-width: ${breakpoints.md}) {
-    grid-template-columns: 1fr 1fr;
-  }
-
   @media (min-width: ${breakpoints.xl}) {
-    grid-template-columns: 1fr;
     width: 60%;
     justify-content: flex-start;
     align-items: flex-start;
-    /* justify-content: flex-start; */
   }
 `
 
@@ -124,7 +120,7 @@ const TalkCardExpertWorkshops = styled.div`
     justify-content: center;
   }
 
-  @media (min-width: ${breakpoints.xl}) {
+  @media (min-width: ${breakpoints.md}) {
     flex-direction: row;
     align-items: flex-start;
     justify-content: flex-start;
@@ -159,7 +155,7 @@ const TalkCardExpertWorkshops = styled.div`
     color: ${theme.white};
     text-align: center;
 
-    @media (min-width: ${breakpoints.xl}) {
+    @media (min-width: ${breakpoints.md}) {
       text-align: start;
     }
   }
