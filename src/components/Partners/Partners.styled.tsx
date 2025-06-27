@@ -18,11 +18,11 @@ const PartnersContainer = styled.div`
 
   @media (min-width: ${breakpoints.md}) {
     padding: 80px 20px;
+    flex-direction: row;
+    gap: 0px;
   }
 
   @media (min-width: ${breakpoints.l}) {
-    flex-direction: row;
-    gap: 0px;
     padding: 100px 60px;
   }
 `
@@ -33,7 +33,7 @@ const PartnerContainerLeft = styled.div`
   justify-content: center;
   align-items: center;
 
-  @media (min-width: ${breakpoints.l}) {
+  @media (min-width: ${breakpoints.md}) {
     justify-content: flex-end;
     width: 40%;
   }
@@ -42,29 +42,27 @@ const PartnerContainerLeft = styled.div`
 const PartnerContainerRight = styled.div`
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 20px;
 
-  @media (min-width: ${breakpoints.l}) {
+  @media (min-width: ${breakpoints.md}) {
     width: 60%;
+    flex-direction: row;
     justify-content: flex-start;
   }
 `
 
 const TitlePartnersSection = styled.h2`
-  font-size: 24px;
+  font-size: 40px;
   font-weight: 900;
   color: ${theme.white};
   letter-spacing: 0.1em;
-
-  @media (min-width: ${breakpoints.md}) {
-    font-size: 40px;
-  }
 `
 
 const ImgPartner = styled.div`
-  width: 160px;
+  width: 200px;
   height: auto;
   display: flex;
   align-items: center;
