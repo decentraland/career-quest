@@ -3,6 +3,7 @@ import { useEffect, useRef } from "react"
 import Lenis from "lenis"
 // Components
 import { About } from "./components/About/About"
+import { Advice } from "./components/Advice/Advice"
 import { Carousel } from "./components/Carousel/Carousel"
 import { ExpertWorkshops } from "./components/ExpertWorshops/ExpertWorkshops"
 import { Faq } from "./components/Faq/Faq"
@@ -85,6 +86,12 @@ const App = () => {
         </MarqueeContainerWrapper>
 
         <ExpertWorkshops />
+
+        <MarqueeContainerWrapper>
+          <Marquee />
+        </MarqueeContainerWrapper>
+
+        <Advice />
 
         <MarqueeContainerWrapper>
           <Marquee />

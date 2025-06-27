@@ -1,8 +1,10 @@
 import { styled } from "styled-components"
+import talksBackground from "../../img/talks/talks-background.png"
 import { breakpoints, theme } from "../../utils/theme"
 
-const ExpertWorkshopsContainer = styled.div`
+const AdviceContainer = styled.div`
   background-color: ${theme.black};
+  position: relative;
   padding: 40px 20px;
   width: 100%;
   height: 100%;
@@ -12,6 +14,25 @@ const ExpertWorkshopsContainer = styled.div`
   justify-content: center;
   align-items: center;
   gap: 40px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(${talksBackground});
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+    z-index: 0;
+  }
+
+  & > * {
+    position: relative;
+    z-index: 1;
+  }
 
   @media (min-width: ${breakpoints.md}) {
     padding: 80px 20px;
@@ -25,7 +46,7 @@ const ExpertWorkshopsContainer = styled.div`
   }
 `
 
-const ExpertWorkshopsContainerLeft = styled.div`
+const AdviceContainerLeft = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
@@ -39,13 +60,18 @@ const ExpertWorkshopsContainerLeft = styled.div`
   }
 `
 
-const ExpertWorkshopsContainerRight = styled.div`
+const AdviceContainerRight = styled.div`
   width: 100%;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 40px;
+
+  @media (min-width: ${breakpoints.md}) {
+    grid-template-columns: 1fr 1fr;
+  }
 
   @media (min-width: ${breakpoints.xl}) {
     width: 60%;
@@ -54,7 +80,7 @@ const ExpertWorkshopsContainerRight = styled.div`
   }
 `
 
-const TalkCardExpertWorkshops = styled.div`
+const TalkCardAdvice = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -68,17 +94,6 @@ const TalkCardExpertWorkshops = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-  }
-
-  @media (min-width: ${breakpoints.md}) {
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-
-    .info-card {
-      align-items: flex-start;
-      justify-content: flex-start;
-    }
   }
 
   img {
@@ -104,10 +119,6 @@ const TalkCardExpertWorkshops = styled.div`
     font-weight: 700;
     color: ${theme.white};
     text-align: center;
-
-    @media (min-width: ${breakpoints.md}) {
-      text-align: start;
-    }
   }
 
   p {
@@ -133,8 +144,8 @@ const TalkCardExpertWorkshops = styled.div`
 `
 
 export {
-  ExpertWorkshopsContainer,
-  ExpertWorkshopsContainerLeft,
-  ExpertWorkshopsContainerRight,
-  TalkCardExpertWorkshops,
+  AdviceContainer,
+  AdviceContainerLeft,
+  AdviceContainerRight,
+  TalkCardAdvice,
 }

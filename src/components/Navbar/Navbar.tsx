@@ -12,7 +12,7 @@ import {
 } from "./Navbar.styled"
 
 const Navbar = () => {
-  const { isMobile, menuOpen, setMenuOpen } = useResizePage({ size: 768 })
+  const { isMobile, menuOpen, setMenuOpen } = useResizePage({ size: 992 })
 
   return (
     <>
@@ -37,6 +37,9 @@ const Navbar = () => {
                 </span>
                 <span>
                   <a href="#workshops">Workshops</a>
+                </span>
+                <span>
+                  <a href="#advice">Advice</a>
                 </span>
                 <span>
                   <a href="#faq">FAQ</a>
@@ -84,6 +87,7 @@ const Navbar = () => {
             <a href="#about">About</a>
             <a href="#schedule">Schedule</a>
             <a href="#workshops">Workshops</a>
+            <a href="#advice">Advice</a>
             <a href="#faq">FAQ</a>
           </div>
           <div className="mobile-socials">
