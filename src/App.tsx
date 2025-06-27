@@ -4,10 +4,10 @@ import Lenis from "lenis"
 // Components
 import { About } from "./components/About/About"
 import { Carousel } from "./components/Carousel/Carousel"
+import { ExpertWorkshops } from "./components/ExpertWorshops/ExpertWorkshops"
 import { Faq } from "./components/Faq/Faq"
 import { Footer } from "./components/Footer/Footer"
 import { Hero } from "./components/Hero/Hero"
-import { LiveTalks } from "./components/LiveTalks/LiveTalks"
 import { Marquee } from "./components/Marquee/Marquee"
 import { MarqueeContainerWrapper } from "./components/Marquee/Marquee.styled"
 import { Navbar } from "./components/Navbar/Navbar"
@@ -84,7 +84,7 @@ const App = () => {
           <Marquee />
         </MarqueeContainerWrapper>
 
-        <LiveTalks />
+        <ExpertWorkshops />
 
         <MarqueeContainerWrapper>
           <Marquee />

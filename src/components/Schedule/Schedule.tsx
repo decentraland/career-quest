@@ -1,6 +1,6 @@
 import { ScheduleTabs } from "./ScheduleTabs"
 import { useResizePage } from "../../hooks/useResizePage"
-import { DivVerticalLine } from "../About/About.styled"
+import { DivVerticalLine } from "../../shared/common.styled"
 import { JumpInBtn } from "../JumpInBtn/JumpInBtn"
 import {
   ScheduleContainer,

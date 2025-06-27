@@ -57,20 +57,7 @@ const TitleAboutSection = styled.h2`
   text-align: center;
 
   @media (min-width: ${breakpoints.md}) {
-    text-align: right;
-  }
-`
-
-const DivVerticalLine = styled.div`
-  width: 2px;
-  background-color: ${theme.white};
-  display: none;
-  margin: 0 40px;
-  height: auto;
-  align-self: stretch;
-
-  @media (min-width: ${breakpoints.md}) {
-    display: block;
+    text-align: end;
   }
 `
 
@@ -94,7 +81,6 @@ export {
   AboutContainer,
   AboutContainerLeft,
   AboutContainerRight,
-  DivVerticalLine,
   LiAbout,
   SpanAbout,
   TitleAboutSection,

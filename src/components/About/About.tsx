@@ -1,9 +1,9 @@
 import { useResizePage } from "../../hooks/useResizePage"
+import { DivVerticalLine } from "../../shared/common.styled"
 import {
   AboutContainer,
   AboutContainerLeft,
   AboutContainerRight,
-  DivVerticalLine,
   LiAbout,
   SpanAbout,
   TitleAboutSection,
