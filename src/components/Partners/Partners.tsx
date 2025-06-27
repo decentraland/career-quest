@@ -18,7 +18,7 @@ import {
 } from "./Partners.styled"
 
 const Partners = () => {
-  const { isMobile } = useResizePage({ size: 992 })
+  const { isMobile } = useResizePage({ size: 768 })
 
   return (
     <PartnersContainer>
@@ -61,10 +61,10 @@ const Partners = () => {
           <img src={bondex} alt="bondex" />
         </ImgPartner>
         <ImgPartner>
-          <img src={shefi} alt="shefi" />
+          <img src={metana} alt="metana" />
         </ImgPartner>
         <ImgPartner>
-          <img src={metana} alt="metana" />
+          <img src={shefi} alt="shefi" />
         </ImgPartner>
       </PartnerContainerRight>
     </PartnersContainer>
