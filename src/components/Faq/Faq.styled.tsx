@@ -115,6 +115,7 @@ const QuestionFaq = styled.div`
     color: ${theme.white};
     text-transform: uppercase;
     letter-spacing: 0.1em;
+    max-width: 560px;
   }
 `
 
@@ -129,11 +130,12 @@ const AnswerFaq = styled.div<{ $isActive: boolean }>`
     font-size: 18px;
     color: ${theme.white};
     font-weight: 500;
+    max-width: 560px;
   }
 
   a {
     text-decoration: underline !important;
-    color: blue;
+    color: ${theme.white};
     text-underline-offset: 4px;
     text-decoration-thickness: 1px;
   }
