@@ -1,48 +1,80 @@
 import { styled } from "styled-components"
+import faqBackground from "../../img/faq/faq-background.png"
 import { breakpoints, theme } from "../../utils/theme"
 
 const SectionFaqContainer = styled.section`
+  position: relative;
+  background-color: ${theme.black};
+  padding: 40px 20px;
   width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  padding: 60px 20px;
-  background-color: ${theme.black};
+  justify-content: center;
+  gap: 20px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(${faqBackground});
+    background-size: cover;
+    opacity: 0.5;
+    z-index: 1;
+  }
+
+  & > * {
+    position: relative;
+    z-index: 2;
+  }
 
   @media (min-width: ${breakpoints.md}) {
-    padding: 80px 80px;
+    padding: 80px 20px;
   }
 
   @media (min-width: ${breakpoints.l}) {
     flex-direction: row;
-    padding: 100px 100px;
-    gap: 40px;
-  }
-
-  @media (min-width: ${breakpoints.xl}) {
-    padding: 100px 150px;
-  }
-
-  @media (min-width: ${breakpoints.xxl}) {
-    padding: 100px 200px;
+    gap: 0px;
+    padding: 100px 60px;
   }
 `
 
-const LeftFaqContainer = styled.div`
+const FaqContainerLeft = styled.div`
   width: 100%;
-  margin-bottom: 40px;
+  display: flex;
 
   @media (min-width: ${breakpoints.l}) {
-    width: 30%;
-    margin-bottom: 0;
+    justify-content: flex-end;
+    width: 40%;
   }
 `
 
-const RightFaqContainer = styled.div`
-  width: 100%;
-  color: ${theme.white};
+const DivVerticalLineFaq = styled.div`
+  width: 2px;
+  background-color: ${theme.white};
+  display: none;
+  margin: 0 40px;
+  height: auto;
+  align-self: stretch;
 
   @media (min-width: ${breakpoints.l}) {
-    width: 70%;
+    display: block;
+  }
+`
+
+const FaqContainerRight = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  @media (min-width: ${breakpoints.l}) {
+    width: 60%;
   }
 `
 
@@ -51,9 +83,17 @@ const TitleFaq = styled.h2`
   font-weight: 900;
   color: ${theme.white};
   letter-spacing: 0.1em;
+  max-width: 425px;
+  text-align: start;
+
+  @media (min-width: ${breakpoints.l}) {
+    text-align: end;
+    max-width: 400px;
+  }
 `
 
 const QuestionFaqContainer = styled.div`
+  width: 100%;
   border-top: 2px solid ${theme.white};
   padding: 20px 0;
 
@@ -106,22 +146,10 @@ const ArrowFaq = styled.img<{ $isActive: boolean }>`
     props.$isActive ? "rotate(180deg)" : "rotate(0deg)"};
 `
 
-const DivVerticalLineFaq = styled.div`
-  display: none;
-  width: 2px;
-  background-color: ${theme.white};
-  height: auto;
-  align-self: stretch;
-
-  @media (min-width: ${breakpoints.l}) {
-    display: block;
-  }
-`
-
 export {
   SectionFaqContainer,
-  LeftFaqContainer,
-  RightFaqContainer,
+  FaqContainerLeft,
+  FaqContainerRight,
   TitleFaq,
   QuestionFaqContainer,
   QuestionFaq,
