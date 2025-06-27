@@ -63,19 +63,6 @@ const TitlePartnersSection = styled.h2`
   }
 `
 
-const DivVerticalLinePartners = styled.div`
-  width: 2px;
-  background-color: ${theme.white};
-  display: none;
-  margin: 0 40px;
-  height: auto;
-  align-self: stretch;
-
-  @media (min-width: ${breakpoints.l}) {
-    display: block;
-  }
-`
-
 const ImgPartner = styled.div`
   width: 160px;
   height: auto;
@@ -113,7 +100,6 @@ export {
   PartnerContainerLeft,
   PartnerContainerRight,
   TitlePartnersSection,
-  DivVerticalLinePartners,
   ImgPartner,
   SocialMediaContainer,
   SocialMediaItem,

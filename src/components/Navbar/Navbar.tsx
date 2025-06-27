@@ -36,6 +36,9 @@ const Navbar = () => {
                   <a href="#schedule">Schedule</a>
                 </span>
                 <span>
+                  <a href="#workshops">Workshops</a>
+                </span>
+                <span>
                   <a href="#faq">FAQ</a>
                 </span>
               </div>
@@ -80,6 +83,7 @@ const Navbar = () => {
           <div className="mobile-links">
             <a href="#about">About</a>
             <a href="#schedule">Schedule</a>
+            <a href="#workshops">Workshops</a>
             <a href="#faq">FAQ</a>
           </div>
           <div className="mobile-socials">

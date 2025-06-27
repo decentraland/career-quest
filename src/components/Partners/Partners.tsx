@@ -6,8 +6,8 @@ import hIcon from "../../img/icons/h-icon.png"
 import bondex from "../../img/partners/bondex.png"
 import metana from "../../img/partners/metana.png"
 import shefi from "../../img/partners/shefi.png"
+import { DivVerticalLine } from "../../shared/common.styled"
 import {
-  DivVerticalLinePartners,
   ImgPartner,
   PartnerContainerLeft,
   PartnerContainerRight,
@@ -52,7 +52,7 @@ const Partners = () => {
               </SocialMediaItem>
             </SocialMediaContainer>
           </div>
-          <DivVerticalLinePartners />
+          <DivVerticalLine />
         </PartnerContainerLeft>
       )}
 
