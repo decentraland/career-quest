@@ -4,10 +4,10 @@ import {
   AnswerFaq,
   ArrowFaq,
   DivVerticalLineFaq,
-  LeftFaqContainer,
+  FaqContainerLeft,
+  FaqContainerRight,
   QuestionFaq,
   QuestionFaqContainer,
-  RightFaqContainer,
   SectionFaqContainer,
   TitleFaq,
 } from "./Faq.styled"
@@ -161,11 +161,12 @@ const Faq = () => {
 
   return (
     <SectionFaqContainer id="faq">
-      <LeftFaqContainer>
+      <FaqContainerLeft>
         <TitleFaq>Frequently Asked Questions</TitleFaq>
-      </LeftFaqContainer>
-      <DivVerticalLineFaq />
-      <RightFaqContainer>
+        <DivVerticalLineFaq />
+      </FaqContainerLeft>
+
+      <FaqContainerRight>
         {questions.map((item, index) => (
           <QuestionFaqContainer key={index}>
             <QuestionFaq onClick={() => toggleAnswer(index)}>
@@ -181,7 +182,7 @@ const Faq = () => {
             </AnswerFaq>
           </QuestionFaqContainer>
         ))}
-      </RightFaqContainer>
+      </FaqContainerRight>
     </SectionFaqContainer>
   )
 }
