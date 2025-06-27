@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { expertWorkShopsData } from "./data"
+import { adviceData } from "./data"
 import { useResizePage } from "../../hooks/useResizePage"
 import comment from "../../img/icons/comment.png"
 import flower from "../../img/icons/flower.png"
@@ -20,33 +20,33 @@ import {
 } from "../../shared/common.styled"
 import { Modal } from "../Modal"
 import {
-  ExpertWorkshopsContainer,
-  ExpertWorkshopsContainerLeft,
-  ExpertWorkshopsContainerRight,
-  TalkCardExpertWorkshops,
-} from "./ExpertWorkshops.styled"
+  AdviceContainer,
+  AdviceContainerLeft,
+  AdviceContainerRight,
+  TalkCardAdvice,
+} from "./Advice.styled"
 
-const ExpertWorkshops = () => {
+const Advice = () => {
   const { isMobile } = useResizePage({ size: 1200 })
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [modalImageUrl, setModalImageUrl] = useState("")
 
   return (
     <>
-      <ExpertWorkshopsContainer id="workshops">
+      <AdviceContainer id="advice">
         {isMobile ? (
-          <WorkshopInfo />
+          <AdviceInfo />
         ) : (
-          <ExpertWorkshopsContainerLeft>
-            <WorkshopInfo />
+          <AdviceContainerLeft>
+            <AdviceInfo />
 
             <DivVerticalLine />
-          </ExpertWorkshopsContainerLeft>
+          </AdviceContainerLeft>
         )}
 
-        <ExpertWorkshopsContainerRight>
-          {expertWorkShopsData.map((talk, index) => (
-            <TalkCardExpertWorkshops key={index}>
+        <AdviceContainerRight>
+          {adviceData.map((talk, index) => (
+            <TalkCardAdvice key={index}>
               <img
                 src={talk.image}
                 alt={talk.title}
@@ -57,17 +57,18 @@ const ExpertWorkshops = () => {
               />
               <div className="info-card">
                 <h3>
-                  {talk.title}: {talk.description}
+                  {talk.title}
+                  {talk.description && `: ${talk.description}`}
                 </h3>
                 <p style={{ marginTop: "30px" }}>{talk.date}</p>
                 <div className="time-card">
                   <p>{talk["time-start"]}</p> | <p>{talk["time-start-p"]}</p>
                 </div>
               </div>
-            </TalkCardExpertWorkshops>
+            </TalkCardAdvice>
           ))}
-        </ExpertWorkshopsContainerRight>
-      </ExpertWorkshopsContainer>
+        </AdviceContainerRight>
+      </AdviceContainer>
 
       <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
         <ModalLiveTalksImage src={modalImageUrl} alt="Modal Image" />
@@ -76,16 +77,17 @@ const ExpertWorkshops = () => {
   )
 }
 
-const WorkshopInfo = () => {
+const AdviceInfo = () => {
   return (
     <LiveTalksInfoContainer>
       <TitleLiveTalksContainer>
-        <TitleLiveTalks>Expert</TitleLiveTalks>
-        <TitleLiveTalks>Workshops</TitleLiveTalks>
+        <TitleLiveTalks>Advice &</TitleLiveTalks>
+        <TitleLiveTalks>Connection</TitleLiveTalks>
       </TitleLiveTalksContainer>
 
       <SubtitleLiveTalks>
-        Take part in Decentraland at the Career Quest Talk Zone (6,88)
+        Gain advice at the Talk Zone (6,88) or connect with recruiters and
+        educators in the Expo Zone (-8,74)
       </SubtitleLiveTalks>
 
       <DescriptionLiveTalksContainer>
@@ -117,4 +119,4 @@ const WorkshopInfo = () => {
   )
 }
 
-export { ExpertWorkshops }
+export { Advice }

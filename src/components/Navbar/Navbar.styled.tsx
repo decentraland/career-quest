@@ -8,7 +8,7 @@ const NavbarContainer = styled.div`
   height: 100%;
   padding: 20px;
 
-  @media (min-width: ${breakpoints.md}) {
+  @media (min-width: ${breakpoints.l}) {
     padding: 20px 40px;
   }
 
@@ -22,7 +22,7 @@ const NavbarContainer = styled.div`
     justify-content: space-between;
     width: 100%;
 
-    @media (min-width: ${breakpoints.md}) {
+    @media (min-width: ${breakpoints.l}) {
       display: none;
     }
   }
@@ -39,7 +39,7 @@ const NavbarContainer = styled.div`
     display: none;
     width: 100%;
 
-    @media (min-width: ${breakpoints.md}) {
+    @media (min-width: ${breakpoints.l}) {
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -56,7 +56,7 @@ const NavbarContainer = styled.div`
       align-items: center;
       gap: 40px;
 
-      @media (min-width: ${breakpoints.md}) {
+      @media (min-width: ${breakpoints.l}) {
         display: flex;
       }
 
@@ -85,7 +85,7 @@ const NavbarContainer = styled.div`
       display: none;
       margin-right: 16px;
 
-      @media (min-width: ${breakpoints.l}) {
+      @media (min-width: ${breakpoints.xxl}) {
         display: block;
       }
     }
@@ -129,7 +129,7 @@ const MenuIcon = styled.button`
   width: 38px;
   height: 38px;
 
-  @media (min-width: ${breakpoints.md}) {
+  @media (min-width: ${breakpoints.l}) {
     display: none;
   }
 
