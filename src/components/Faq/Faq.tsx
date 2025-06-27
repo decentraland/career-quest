@@ -89,7 +89,9 @@ const Faq = () => {
             Marketplace
           </a>
           , you can use a credit/debit card, bank transfer, or a variety of
-          cryptocurrencies. As for a{" "}
+          cryptocurrencies. <br />
+          <br />
+          As for a{" "}
           <a
             href="https://docs.decentraland.org/player/blockchain-integration/get-a-wallet/?utm_org=dcl&utm_source=landing&utm_medium=organic&utm_campaign=careerquest"
             target="_blank"
