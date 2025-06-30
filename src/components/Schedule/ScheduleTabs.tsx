@@ -186,9 +186,9 @@ const renderContent = (activeTab: number) => {
 
           <ScheduleListItem>
             <div>
-              <span className="first-span">Midnight UTC</span>
+              <span className="first-span">10:pm UTC</span>
 
-              <span className="first-span">04:00am PST</span>
+              <span className="first-span">03:00pm PST</span>
             </div>
 
             <span className="first-span tablet-span">
