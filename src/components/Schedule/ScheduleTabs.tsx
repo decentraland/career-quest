@@ -281,7 +281,7 @@ const renderContent = (activeTab: number) => {
             </span>
 
             <span className="second-span">
-              Meet the Team from <b>Metana & Decentraland Foundation</b>
+              Meet the Team from <b>Metana & SheFi</b>
             </span>
           </ScheduleListItem>
 
