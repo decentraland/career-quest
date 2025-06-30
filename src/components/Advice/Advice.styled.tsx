@@ -66,17 +66,18 @@ const AdviceContainerRight = styled.div`
   grid-template-columns: 1fr;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
   gap: 40px;
 
   @media (min-width: ${breakpoints.md}) {
     grid-template-columns: 1fr 1fr;
+    align-items: stretch;
   }
 
   @media (min-width: ${breakpoints.xl}) {
     width: 60%;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: stretch;
   }
 `
 
@@ -84,16 +85,19 @@ const TalkCardAdvice = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 20px;
   background-color: ${theme.black};
   height: 100%;
+  min-height: 100%;
 
   .info-card {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    flex: 1;
+    width: 100%;
   }
 
   img {
@@ -103,6 +107,7 @@ const TalkCardAdvice = styled.div`
     object-fit: cover;
     border-radius: 25px;
     cursor: pointer;
+    flex-shrink: 0;
 
     aspect-ratio: 16/9;
     transition: transform 0.3s ease;
@@ -119,6 +124,7 @@ const TalkCardAdvice = styled.div`
     font-weight: 700;
     color: ${theme.white};
     text-align: center;
+    margin: 0;
   }
 
   p {
@@ -126,6 +132,7 @@ const TalkCardAdvice = styled.div`
     font-weight: 700;
     color: ${theme.white};
     text-align: center;
+    margin: 0;
   }
 
   .time-card {
