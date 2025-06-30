@@ -8,16 +8,16 @@ export const expertWorkShopsData = [
     title: "Web3 Jobs Decoded",
     description: "Where the Opportunities Are in 2025— with Bondex",
     date: "Wed, July 16",
-    "time-start": "12:00pm UTC",
-    "time-start-p": "05:00am PST",
+    "time-start": "12:00am UTC",
+    "time-start-p": "5:00am PST",
   },
   {
     image: panelTwo,
     title: "Resume Skills for Web3",
     description: "How to Build a CV That Gets Attention — with Metana",
     date: "Wed, July 16",
-    "time-start": "02:00pm UTC",
-    "time-start-p": "07:00am PST",
+    "time-start": "2:00pm UTC",
+    "time-start-p": "7:00am PST",
   },
   {
     image: panelThree,
@@ -25,7 +25,7 @@ export const expertWorkShopsData = [
     description:
       "How to Stand Out to Startups, Protocols & Recruiters — with Serotonin",
     date: "Wed, July 16",
-    "time-start": "10:00pm UTC",
-    "time-start-p": "3:00pm PST",
+    "time-start": "12:00pm UTC",
+    "time-start-p": "5:00pm PST",
   },
 ]
