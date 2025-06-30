@@ -99,7 +99,8 @@ const renderContent = (activeTab: number) => {
             </span>
 
             <span className="second-span">
-              Resume Skills for Web3: How to Build a CV That Gets Attention
+              Resume Skills for Web3: How to Build a CV that Gets Attention -
+              Metana
             </span>
           </ScheduleListItem>
 
@@ -139,48 +140,15 @@ const renderContent = (activeTab: number) => {
             <div>
               <span className="first-span">09:00pm UTC</span>
 
-              <span className="first-span">04:00am PST</span>
+              <span className="first-span">02:00pm PST</span>
             </div>
 
             <span className="first-span tablet-span">
-              09:00pm UTC 04:00am PST
+              09:00pm UTC 02:00pm PST
             </span>
 
             <span className="second-span">
               Ghosted Again? How to Handle Rejection in Web3 Job Hunting
-            </span>
-          </ScheduleListItem>
-
-          <ScheduleListItem>
-            <div>
-              <span className="first-span">10:00pm UTC</span>
-
-              <span className="first-span">04:00am PST</span>
-            </div>
-
-            <span className="first-span tablet-span">
-              10:00pm UTC 04:00am PST
-            </span>
-
-            <span className="second-span">
-              Pitch Yourself in Web3: How to Stand Out to Startups, Protocols &
-              Recruiters
-            </span>
-          </ScheduleListItem>
-
-          <ScheduleListItem>
-            <div>
-              <span className="first-span">11:00pm UTC</span>
-
-              <span className="first-span">04:00am PST</span>
-            </div>
-
-            <span className="first-span tablet-span">
-              11:00pm UTC 04:00am PST
-            </span>
-
-            <span className="second-span">
-              Careers in <b>Marketing</b>: What I Wish I’d Known
             </span>
           </ScheduleListItem>
 
@@ -196,7 +164,40 @@ const renderContent = (activeTab: number) => {
             </span>
 
             <span className="second-span">
-              Meet the Teams from web3.career & Decentraland Foundation
+              Meet the Team from web3.career & Decentraland Foundation
+            </span>
+          </ScheduleListItem>
+
+          <ScheduleListItem>
+            <div>
+              <span className="first-span">11:00pm UTC</span>
+
+              <span className="first-span">04:00pm PST</span>
+            </div>
+
+            <span className="first-span tablet-span">
+              11:00pm UTC 04:00pm PST
+            </span>
+
+            <span className="second-span">
+              Careers in <b>Marketing</b>: What I Wish I’d Known
+            </span>
+          </ScheduleListItem>
+
+          <ScheduleListItem>
+            <div>
+              <span className="first-span">Midnight UTC</span>
+
+              <span className="first-span">05:00pm PST</span>
+            </div>
+
+            <span className="first-span tablet-span">
+              Midnight UTC 05:00pm PST
+            </span>
+
+            <span className="second-span">
+              Pitch Yourself in Web3: How to Stand Out to Startups, Protocols &
+              Recruiters
             </span>
           </ScheduleListItem>
 
@@ -204,11 +205,11 @@ const renderContent = (activeTab: number) => {
             <div>
               <span className="first-span">01:00am UTC</span>
 
-              <span className="first-span">04:00am PST</span>
+              <span className="first-span">06:00pm PST</span>
             </div>
 
             <span className="first-span tablet-span">
-              01:00am UTC 04:00am PST
+              01:00am UTC 06:00pm PST
             </span>
 
             <span className="second-span">
@@ -220,11 +221,11 @@ const renderContent = (activeTab: number) => {
             <div>
               <span className="first-span">02:00am UTC</span>
 
-              <span className="first-span">04:00am PST</span>
+              <span className="first-span">07:00pm PST</span>
             </div>
 
             <span className="first-span tablet-span">
-              02:00am UTC 04:00am PST
+              02:00am UTC 07:00pm PST
             </span>
 
             <span className="second-span">
@@ -305,11 +306,11 @@ const renderContent = (activeTab: number) => {
             <div>
               <span className="first-span">04:00pm UTC</span>
 
-              <span className="first-span">09:00 am PST</span>
+              <span className="first-span">09:00am PST</span>
             </div>
 
             <span className="first-span tablet-span">
-              04:00pm UTC 09:00 am PST
+              04:00pm UTC 09:00am PST
             </span>
 
             <span className="second-span">
@@ -321,11 +322,11 @@ const renderContent = (activeTab: number) => {
             <div>
               <span className="first-span">09:00pm UTC</span>
 
-              <span className="first-span">04:00 am PST</span>
+              <span className="first-span">02:00pm PST</span>
             </div>
 
             <span className="first-span tablet-span">
-              04:00pm UTC 04:00 am PST
+              09:00pm UTC 02:00pm PST
             </span>
 
             <span className="second-span">
@@ -335,29 +336,13 @@ const renderContent = (activeTab: number) => {
 
           <ScheduleListItem>
             <div>
-              <span className="first-span">10:00pm UTC</span>
-
-              <span className="first-span">04:00am PST</span>
-            </div>
-
-            <span className="first-span tablet-span">
-              09:00pm UTC 04:00am PST
-            </span>
-
-            <span className="second-span">
-              Web3 Jobs Decoded: Where the Opportunities Are in 2025
-            </span>
-          </ScheduleListItem>
-
-          <ScheduleListItem>
-            <div>
               <span className="first-span">11:00pm UTC</span>
 
-              <span className="first-span">04:00am PST</span>
+              <span className="first-span">04:00pm PST</span>
             </div>
 
             <span className="first-span tablet-span">
-              11:00pm UTC 04:00am PST
+              11:00pm UTC 04:00pm PST
             </span>
 
             <span className="second-span">
@@ -369,15 +354,16 @@ const renderContent = (activeTab: number) => {
             <div>
               <span className="first-span">Midnight UTC</span>
 
-              <span className="first-span">04:00am PST</span>
+              <span className="first-span">05:00pm PST</span>
             </div>
 
             <span className="first-span tablet-span">
-              Midnight UTC 04:00am PST
+              Midnight UTC 05:00pm PST
             </span>
 
             <span className="second-span">
-              Resume Skills for Web3: How to Build a CV That Gets Attention
+              Resume Skills for Web3: How to Build a CV that Gets Attention -
+              Metana
             </span>
           </ScheduleListItem>
 
@@ -385,11 +371,11 @@ const renderContent = (activeTab: number) => {
             <div>
               <span className="first-span">01:00am UTC</span>
 
-              <span className="first-span">04:00am PST</span>
+              <span className="first-span">06:00pm PST</span>
             </div>
 
             <span className="first-span tablet-span">
-              01:00am UTC 04:00am PST
+              01:00am UTC 06:00pm PST
             </span>
 
             <span className="second-span">
@@ -401,11 +387,11 @@ const renderContent = (activeTab: number) => {
             <div>
               <span className="first-span">02:00am UTC</span>
 
-              <span className="first-span">04:00am PST</span>
+              <span className="first-span">07:00pm PST</span>
             </div>
 
             <span className="first-span tablet-span">
-              02:00am UTC 04:00am PST
+              Midnight UTC 04:00am PST
             </span>
 
             <span className="second-span">
