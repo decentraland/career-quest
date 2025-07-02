@@ -1,11 +1,9 @@
-import carouselImageOne from "../../img/carousel/img1.png"
-import carouselImageTwo from "../../img/carousel/img2.png"
-import carouselImageThree from "../../img/carousel/img3.png"
-import carouselImageFour from "../../img/carousel/img4.png"
+import carouselImageOne from "../../img/carousel/img1.jpg"
+import carouselImageTwo from "../../img/carousel/img2.jpg"
+import carouselImageThree from "../../img/carousel/img3.jpg"
+import carouselImageFour from "../../img/carousel/img4.jpg"
 import carouselImageFive from "../../img/carousel/img5.png"
 import carouselImageSix from "../../img/carousel/img6.png"
-import carouselImageSeven from "../../img/carousel/img7.png"
-import carouselImageEight from "../../img/carousel/img8.png"
 import {
   CarouselContainer,
   CarouselItem,
@@ -23,8 +21,6 @@ const Carousel = () => {
     carouselImageFour,
     carouselImageFive,
     carouselImageSix,
-    carouselImageSeven,
-    carouselImageEight,
   ]
 
   return (
