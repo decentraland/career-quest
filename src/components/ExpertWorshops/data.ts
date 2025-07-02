@@ -1,4 +1,4 @@
-import panelOne from "../../img/talks/panel1.jpeg"
+import panelOne from "../../img/talks/panel1.png"
 import panelTwo from "../../img/talks/panel2.png"
 import panelThree from "../../img/talks/panel3.png"
 

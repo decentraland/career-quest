@@ -1,17 +1,11 @@
 import { useState } from "react"
 import { adviceData } from "./data"
 import { useResizePage } from "../../hooks/useResizePage"
-import comment from "../../img/icons/comment.png"
-import flower from "../../img/icons/flower.png"
-import glitter from "../../img/icons/glitter.png"
-import hIcon from "../../img/icons/h-icon.png"
 import repeat from "../../img/icons/repeat.png"
 import {
   DescriptionLiveTalksContainer,
-  DescriptionTextLiveTalks,
   DivVerticalLine,
   IconItemLiveTalks,
-  IconsLiveTalksContainer,
   LiveTalksInfoContainer,
   ModalLiveTalksImage,
   SubtitleLiveTalks,
@@ -94,26 +88,6 @@ const AdviceInfo = () => {
         <IconItemLiveTalks>
           <img src={repeat} alt="repeat" />
         </IconItemLiveTalks>
-
-        <DescriptionTextLiveTalks>
-          All content will repeat in world starting at Midnight UTC the
-          following day
-        </DescriptionTextLiveTalks>
-
-        <IconsLiveTalksContainer>
-          <IconItemLiveTalks>
-            <img src={glitter} alt="glitter" />
-          </IconItemLiveTalks>
-          <IconItemLiveTalks>
-            <img src={flower} alt="flower" />
-          </IconItemLiveTalks>
-          <IconItemLiveTalks>
-            <img src={comment} alt="comment" />
-          </IconItemLiveTalks>
-          <IconItemLiveTalks>
-            <img src={hIcon} alt="h-icon" />
-          </IconItemLiveTalks>
-        </IconsLiveTalksContainer>
       </DescriptionLiveTalksContainer>
     </LiveTalksInfoContainer>
   )
