@@ -54,10 +54,6 @@ const TitleSchedule = styled.h2`
 
 const TabsScheduleContainer = styled.div`
   width: 100%;
-
-  @media (min-width: ${breakpoints.l}) {
-    max-width: 635px;
-  }
 `
 
 const TabsScheduleList = styled.div`
@@ -130,6 +126,7 @@ const ScheduleList = styled.ul`
 `
 
 const ScheduleListItem = styled.li`
+  width: 100%;
   color: ${theme.white};
   display: flex;
   align-items: center;
@@ -143,7 +140,7 @@ const ScheduleListItem = styled.li`
 
   .first-span {
     font-weight: 700;
-    font-size: 10px;
+    font-size: 13px;
     flex: 1;
   }
 
