@@ -62,7 +62,7 @@ const ModalBackdrop = styled.div`
 const ModalContent = styled.div<{ isDownloadModal?: boolean }>`
   position: relative;
   max-width: 1200px;
-  width: 90%;
+  width: 70%;
   background-color: #0f1417;
   border-radius: 4px;
   padding: 24px;
