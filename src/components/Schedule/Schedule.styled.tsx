@@ -131,47 +131,53 @@ const ScheduleListItem = styled.li`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 16px;
+  gap: 20px;
 
-  div {
+  .date-container {
+    width: 27%;
     display: flex;
     flex-direction: column;
+  }
+
+  .title-container {
+    width: 73%;
   }
 
   .first-span {
     font-weight: 700;
     font-size: 13px;
-    flex: 1;
   }
 
   .second-span {
     font-weight: 500;
     font-size: 16px;
-    flex: 2;
-  }
-
-  .tablet-span {
-    display: none;
   }
 
   @media (min-width: ${breakpoints.s}) {
     justify-content: flex-start;
-    gap: 0px;
+    /* gap: 0px; */
 
-    div {
-      display: none;
+    .date-container {
+      flex-direction: row;
+      justify-content: space-between;
     }
 
-    .tablet-span {
-      display: block;
+    .date-container {
+      width: 30%;
     }
 
-    .first-span {
-      flex: 1;
+    .title-container {
+      width: 70%;
+    }
+  }
+
+  @media (min-width: ${breakpoints.md}) {
+    .date-container {
+      width: 27%;
     }
 
-    .second-span {
-      flex: 2.5;
+    .title-container {
+      width: 73%;
     }
   }
 `
