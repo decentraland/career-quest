@@ -41,19 +41,14 @@ const renderContent = (activeTab: number) => {
     <ScheduleList>
       {scheduleData.map((item, index) => (
         <ScheduleListItem key={index}>
-          <div>
+          <div className="date-container">
             <span className="first-span">{item.dateUTC}</span>
             <span className="first-span">{item.datePST}</span>
           </div>
 
-          <span className="first-span tablet-span">
-            {item.dateUTC} {item.datePST}
-          </span>
-
-          <span
-            className="second-span"
-            dangerouslySetInnerHTML={{ __html: item.title }}
-          />
+          <div className="title-container">
+            <span className="second-span">{item.title}</span>
+          </div>
         </ScheduleListItem>
       ))}
     </ScheduleList>
