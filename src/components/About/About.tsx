@@ -19,7 +19,7 @@ const About = () => {
       ) : (
         <AboutContainerLeft>
           <div style={{ display: "flex", flexDirection: "column" }}>
-            <TitleAboutSection>Launch your</TitleAboutSection>
+            <TitleAboutSection>Launch Your</TitleAboutSection>
             <TitleAboutSection>Web3 Career</TitleAboutSection>
           </div>
 
