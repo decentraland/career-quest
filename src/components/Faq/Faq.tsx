@@ -66,15 +66,6 @@ const Faq = () => {
       ),
     },
     {
-      question: "How do I join?",
-      answer: () => (
-        <p>
-          Just create an account and download Decentraland. Once inside, look
-          for the Career Quest hub.
-        </p>
-      ),
-    },
-    {
       question:
         "Do I need cryptocurrency or a digital wallet to use Decentraland?",
       answer: () => (
