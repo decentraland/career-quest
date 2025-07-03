@@ -15,9 +15,8 @@ const Partners = () => {
     <PartnersContainer>
       <PartnerContainerLeft>
         <TitlePartnersSection>Partners</TitlePartnersSection>
+        <DivVerticalLine />
       </PartnerContainerLeft>
-
-      <DivVerticalLine />
 
       <PartnerContainerRight>
         <ImgPartner>

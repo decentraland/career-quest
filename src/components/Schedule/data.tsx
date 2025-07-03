@@ -13,23 +13,22 @@ const dayOne = [
   {
     dateUTC: "01:00pm UTC",
     datePST: "06:00am PST",
-    title: "Careers in <b>Product Management</b>: What I Wish I'd Known",
+    title: "Careers in Product Management: What I Wish I’d Known",
   },
   {
     dateUTC: "02:00pm UTC",
     datePST: "07:00am PST",
-    title:
-      "Resume Skills for Web3: How to Build a CV that Gets Attention - Metana",
+    title: "Resume Skills for Web3: How to Build a CV That Gets Attention",
   },
   {
     dateUTC: "03:00pm UTC",
     datePST: "08:00am PST",
-    title: "Careers in <b>Dev Rel & Support</b>: What I Wish I'd Known",
+    title: "Careers in Dev Rel & Support: What I Wish I’d Known",
   },
   {
     dateUTC: "04:00pm UTC",
     datePST: "09:00am PST",
-    title: "Web3 Knowledge <b>Tournament</b>",
+    title: "Web3 Knowledge Tournament",
   },
   {
     dateUTC: "09:00pm UTC",
@@ -39,28 +38,28 @@ const dayOne = [
   {
     dateUTC: "10:00pm UTC",
     datePST: "03:00pm PST",
-    title: "Meet the Team from web3.career & Decentraland Foundation",
-  },
-  {
-    dateUTC: "11:00pm UTC",
-    datePST: "04:00pm PST",
-    title: "Careers in <b>Marketing</b>: What I Wish I'd Known",
-  },
-  {
-    dateUTC: "Midnight UTC",
-    datePST: "05:00pm PST",
     title:
       "Pitch Yourself in Web3: How to Stand Out to Startups, Protocols & Recruiters",
   },
   {
+    dateUTC: "11:00pm UTC",
+    datePST: "04:00pm PST",
+    title: "Careers in Marketing: What I Wish I’d Known",
+  },
+  {
+    dateUTC: "Midnight UTC",
+    datePST: "05:00pm PST",
+    title: "Meet the Teams From web3.career & Decentraland Foundation",
+  },
+  {
     dateUTC: "01:00am UTC",
     datePST: "06:00pm PST",
-    title: "Careers in <b>Community Building</b>: What I Wish I'd Known",
+    title: "Careers in Community Building: What I Wish I’d Known",
   },
   {
     dateUTC: "02:00am UTC",
     datePST: "07:00pm PST",
-    title: "Web3 Knowledge <b>Tournament</b>",
+    title: "Web3 Knowledge Tournament",
   },
 ]
 
@@ -74,48 +73,53 @@ const dayTwo = [
   {
     dateUTC: "01:00pm UTC",
     datePST: "06:00am PST",
-    title: "Careers in <b>Marketing</b>: What I Wish I'd Known",
+    title: "Careers in Marketing: What I Wish I’d Known",
   },
   {
     dateUTC: "02:00pm UTC",
     datePST: "07:00am PST",
-    title: "Meet the Team from <b>Metana & SheFi</b>",
+    title: "Meet the Team From Metana & Decentraland Foundation",
   },
   {
     dateUTC: "03:00pm UTC",
     datePST: "08:00am PST",
-    title: "Careers in <b>Community Building</b>: What I Wish I'd Known",
+    title: "Careers in Community Building: What I Wish I’d Known",
   },
   {
     dateUTC: "04:00pm UTC",
     datePST: "09:00am PST",
-    title: "Web3 Knowledge <b>Tournament</b>",
+    title: "Web3 Knowledge Tournament",
   },
   {
     dateUTC: "09:00pm UTC",
     datePST: "02:00pm PST",
-    title: "Careers in <b>Virtual Worlds</b>: What I Wish I'd Known",
+    title: "Careers in Virtual Worlds: What I Wish I’d Known",
+  },
+  {
+    dateUTC: "10:00pm UTC",
+    datePST: "03:00pm PST",
+    title: "Web3 Jobs Decoded: Where the Opportunities Are in 2025",
   },
   {
     dateUTC: "11:00pm UTC",
     datePST: "04:00pm PST",
-    title: "Careers in <b>Product Management</b>: What I Wish I'd Known",
+    title: "Careers in Product Management: What I Wish I’d Known",
   },
   {
     dateUTC: "Midnight UTC",
     datePST: "05:00pm PST",
     title:
-      "Resume Skills for Web3: How to Build a CV that Gets Attention - Metana",
+      "Resume Skills for Web3: How to Build a CV That Gets Attention - Metana",
   },
   {
     dateUTC: "01:00am UTC",
     datePST: "06:00pm PST",
-    title: "Careers in <b>Dev Rel & Support</b>: What I Wish I'd Known",
+    title: "Careers in Dev Rel & Support: What I Wish I'd Known",
   },
   {
     dateUTC: "02:00am UTC",
     datePST: "07:00pm PST",
-    title: "Web3 Knowledge <b>Tournament</b>",
+    title: "Web3 Knowledge Tournament",
   },
 ]
 

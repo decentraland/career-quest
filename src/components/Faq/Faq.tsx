@@ -42,8 +42,7 @@ const Faq = () => {
       question: "How do I access Decentraland Career Quest?",
       answer: () => (
         <p>
-          Decentraland Career Quest will take place in Decentraland. Download
-          the{" "}
+          Decentraland Career Quest happens inside Decentraland. Download the{" "}
           <a
             href="https://decentraland.org/download?utm_org=dcl&utm_source=landing&utm_medium=organic&utm_campaign=careerquest"
             target="_blank"
@@ -51,9 +50,9 @@ const Faq = () => {
           >
             Desktop Client
           </a>{" "}
-          to get started. A jump-in link will appear on this page when Career
-          Quest is taking place, meanwhile feel free to explore Genesis Plaza
-          with your avatar.
+          to get started. When Career Quest is live, just click the jump-in link
+          on this page or head to the Career Quest Garden at coordinates 6,88.
+          In the meantime, feel free to explore Genesis Plaza with your avatar!
         </p>
       ),
     },
@@ -120,8 +119,8 @@ const Faq = () => {
           >
             @Decentraland
           </a>{" "}
-          on X.com and search MVFW25 for live updates. You can also find
-          Decentraland on{" "}
+          on X and search Decentraland Career Quest for live updates. You can
+          also find Decentraland on{" "}
           <a
             href="https://www.instagram.com/decentraland_foundation/"
             target="_blank"
@@ -153,7 +152,7 @@ const Faq = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Decentraland Create
+            Decentraland
           </a>{" "}
           page.
         </p>
