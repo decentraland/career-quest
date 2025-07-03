@@ -74,6 +74,7 @@ const Faq = () => {
           free to explore. If you want to buy a community-made creation from the{" "}
           <a
             href="https://decentraland.org/marketplace/?utm_org=dcl&utm_source=landing&utm_medium=organic&utm_campaign=careerquest"
+            target="_blank"
             rel="noopener noreferrer"
           >
             Marketplace
@@ -110,8 +111,16 @@ const Faq = () => {
           >
             @Decentraland
           </a>{" "}
-          on X and search Decentraland Career Quest for live updates. You can
-          also find Decentraland on{" "}
+          on{" "}
+          <a
+            href="https://decentraland.beehiiv.com/subscribe?utm_org=dcl&utm_source=landing&utm_medium=organic&utm_campaign=careerquest"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            X
+          </a>{" "}
+          and search Decentraland Career Quest for live updates. You can also
+          find Decentraland on{" "}
           <a
             href="https://www.instagram.com/decentraland_foundation/"
             target="_blank"
@@ -121,7 +130,7 @@ const Faq = () => {
           </a>
           , or{" "}
           <a
-            href="https://decentraland.beehiiv.com/subscribe?utm_org=dcl&utm_source=mvfwlanding&utm_medium=organic&utm_campaign=mvfw25&utm_term=faq&utm_content=newsletter"
+            href="https://decentraland.beehiiv.com/subscribe?utm_org=dcl&utm_source=landing&utm_medium=organic&utm_campaign=careerquest"
             target="_blank"
             rel="noopener noreferrer"
           >
