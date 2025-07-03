@@ -53,6 +53,7 @@ const ExpertWorkshops = () => {
                 <h3>
                   {talk.title}: {talk.description}
                 </h3>
+                <h3>{talk.description2}</h3>
                 <p style={{ marginTop: "30px" }}>{talk.date}</p>
                 <div className="time-card">
                   <p>{talk["time-start"]}</p> | <p>{talk["time-start-p"]}</p>

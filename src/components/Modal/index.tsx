@@ -1,6 +1,7 @@
 import { useEffect } from "react"
 import { IoMdClose } from "react-icons/io"
 import { styled } from "styled-components"
+import { breakpoints } from "../../utils/theme"
 
 // Tipos
 type ModalProps = {
@@ -62,12 +63,16 @@ const ModalBackdrop = styled.div`
 const ModalContent = styled.div<{ isDownloadModal?: boolean }>`
   position: relative;
   max-width: 1200px;
-  width: 70%;
+  width: 90%;
   background-color: #0f1417;
   border-radius: 4px;
   padding: 24px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   border: 0.5px solid #ebecfa;
+
+  @media (min-width: ${breakpoints.md}) {
+    width: 70%;
+  }
 
   ${({ isDownloadModal }) =>
     isDownloadModal &&

@@ -15,7 +15,7 @@ const About = () => {
   return (
     <AboutContainer id="about">
       {isMobile ? (
-        <TitleAboutSection>Launch your Web3 Career</TitleAboutSection>
+        <TitleAboutSection>Launch Your Web3 Career</TitleAboutSection>
       ) : (
         <AboutContainerLeft>
           <div style={{ display: "flex", flexDirection: "column" }}>

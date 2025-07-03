@@ -28,7 +28,7 @@ const Partners = () => {
           <p>Official Training Partner</p>
         </ImgPartner>
         <ImgPartner>
-          <img src={shefi} alt="shefi" />
+          <img className="img-shefi" src={shefi} alt="shefi" />
           <p>Official Access Partner</p>
         </ImgPartner>
       </PartnerContainerRight>

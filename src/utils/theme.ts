@@ -10,6 +10,7 @@ const basicPalette = {
   background: "#040D2D",
   accent: themeConfig.accent,
   blueGray: "#B8BEE5",
+  blueLink: "#0000EE",
   gray: "#CCCCCC",
   darkGray: "#161518",
   purple: "#a524b3",

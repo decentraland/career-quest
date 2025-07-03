@@ -155,15 +155,9 @@ const ScheduleListItem = styled.li`
 
   @media (min-width: ${breakpoints.s}) {
     justify-content: flex-start;
-    /* gap: 0px; */
 
     .date-container {
-      flex-direction: row;
-      justify-content: space-between;
-    }
-
-    .date-container {
-      width: 30%;
+      max-width: 100px;
     }
 
     .title-container {
@@ -173,7 +167,9 @@ const ScheduleListItem = styled.li`
 
   @media (min-width: ${breakpoints.md}) {
     .date-container {
-      width: 27%;
+      flex-direction: row;
+      justify-content: space-between;
+      max-width: 200px;
     }
 
     .title-container {

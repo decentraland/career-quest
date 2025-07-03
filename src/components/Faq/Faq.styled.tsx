@@ -135,7 +135,7 @@ const AnswerFaq = styled.div<{ $isActive: boolean }>`
 
   a {
     text-decoration: underline !important;
-    color: ${theme.white};
+    color: rgb(0, 0, 238);
     text-underline-offset: 4px;
     text-decoration-thickness: 1px;
   }
