@@ -152,7 +152,7 @@ const Faq = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Decentraland
+            Decentraland Create
           </a>{" "}
           page.
         </p>

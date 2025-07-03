@@ -74,10 +74,14 @@ const ImgPartner = styled.div`
   flex: 1;
 
   img {
-    width: 100%;
-    height: auto;
+    width: 200px;
+    height: 80px;
     object-fit: contain;
     flex-shrink: 0;
+  }
+
+  .img-shefi {
+    width: 150px;
   }
 
   p {
