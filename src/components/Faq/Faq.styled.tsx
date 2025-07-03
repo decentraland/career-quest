@@ -71,7 +71,7 @@ const FaqContainerRight = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  /* gap: 20px; */
 
   @media (min-width: ${breakpoints.l}) {
     width: 60%;
