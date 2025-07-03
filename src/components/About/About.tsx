@@ -39,14 +39,14 @@ const About = () => {
           </LiAbout>
 
           <LiAbout>
-            Join <SpanAbout>real-time challenges</SpanAbout> in the Career Quest
-            Game Arena
+            Join <SpanAbout>knowledge tournaments</SpanAbout> in the Career
+            Quest Game Arena
           </LiAbout>
 
           <LiAbout>
             Connect with{" "}
             <SpanAbout>Bondex, web3.career, Metana and SheFi</SpanAbout> for
-            hiring & training insights
+            hiring and training insights
           </LiAbout>
 
           <LiAbout>
