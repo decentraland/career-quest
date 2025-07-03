@@ -1,8 +1,3 @@
-import { useResizePage } from "../../hooks/useResizePage"
-import comment from "../../img/icons/comment.png"
-import flower from "../../img/icons/flower.png"
-import glitter from "../../img/icons/glitter.png"
-import hIcon from "../../img/icons/h-icon.png"
 import bondex from "../../img/partners/bondex.png"
 import metana from "../../img/partners/metana.png"
 import shefi from "../../img/partners/shefi.png"
@@ -12,59 +7,30 @@ import {
   PartnerContainerLeft,
   PartnerContainerRight,
   PartnersContainer,
-  SocialMediaContainer,
-  SocialMediaItem,
   TitlePartnersSection,
 } from "./Partners.styled"
 
 const Partners = () => {
-  const { isMobile } = useResizePage({ size: 768 })
-
   return (
     <PartnersContainer>
-      {isMobile ? (
+      <PartnerContainerLeft>
         <TitlePartnersSection>Partners</TitlePartnersSection>
-      ) : (
-        <PartnerContainerLeft>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "center",
-              gap: "20px",
-            }}
-          >
-            <TitlePartnersSection>Partners</TitlePartnersSection>
+      </PartnerContainerLeft>
 
-            <SocialMediaContainer>
-              <SocialMediaItem>
-                <img src={glitter} alt="glitter" />
-              </SocialMediaItem>
-              <SocialMediaItem>
-                <img src={flower} alt="flower" />
-              </SocialMediaItem>
-              <SocialMediaItem>
-                <img src={comment} alt="comment" />
-              </SocialMediaItem>
-              <SocialMediaItem>
-                <img src={hIcon} alt="h-icon" />
-              </SocialMediaItem>
-            </SocialMediaContainer>
-          </div>
-          <DivVerticalLine />
-        </PartnerContainerLeft>
-      )}
+      <DivVerticalLine />
 
       <PartnerContainerRight>
         <ImgPartner>
           <img src={bondex} alt="bondex" />
+          <p>Official Hiring Partner</p>
         </ImgPartner>
         <ImgPartner>
           <img src={metana} alt="metana" />
+          <p>Official Training Partner</p>
         </ImgPartner>
         <ImgPartner>
           <img src={shefi} alt="shefi" />
+          <p>Official Access Partner</p>
         </ImgPartner>
       </PartnerContainerRight>
     </PartnersContainer>

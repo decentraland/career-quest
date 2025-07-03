@@ -20,6 +20,7 @@ const PartnersContainer = styled.div`
     padding: 80px 20px;
     flex-direction: row;
     gap: 0px;
+    align-items: stretch;
   }
 
   @media (min-width: ${breakpoints.l}) {
@@ -51,6 +52,7 @@ const PartnerContainerRight = styled.div`
     width: 60%;
     flex-direction: row;
     justify-content: flex-start;
+    align-items: stretch;
   }
 `
 
@@ -63,16 +65,31 @@ const TitlePartnersSection = styled.h2`
 
 const ImgPartner = styled.div`
   width: 200px;
-  height: auto;
+  height: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  /* border: 1px solid red; */
+  justify-content: space-between;
+  gap: 16px;
+  flex: 1;
 
   img {
     width: 100%;
     height: auto;
     object-fit: contain;
+    flex-shrink: 0;
+  }
+
+  p {
+    background: linear-gradient(90deg, ${theme.purple}, ${theme.orange});
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+    flex-shrink: 0;
   }
 `
 
