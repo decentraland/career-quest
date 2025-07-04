@@ -157,7 +157,7 @@ const ScheduleListItem = styled.li`
     justify-content: flex-start;
 
     .date-container {
-      max-width: 100px;
+      max-width: 120px;
     }
 
     .title-container {
