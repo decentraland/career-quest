@@ -176,6 +176,18 @@ const ScheduleListItem = styled.li`
       width: 73%;
     }
   }
+
+  @media (min-width: ${breakpoints.l}) {
+    .date-container {
+      flex-direction: column;
+    }
+  }
+
+  @media (min-width: ${breakpoints.xl}) {
+    .date-container {
+      flex-direction: row;
+    }
+  }
 `
 
 export {
