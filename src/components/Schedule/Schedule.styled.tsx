@@ -145,7 +145,7 @@ const ScheduleListItem = styled.li`
 
   .first-span {
     font-weight: 700;
-    font-size: 13px;
+    font-size: 14px;
   }
 
   .second-span {

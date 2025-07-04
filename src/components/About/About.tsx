@@ -28,7 +28,7 @@ const About = () => {
       )}
 
       <AboutContainerRight>
-        <ul style={{ padding: "0 20px", maxWidth: "600px" }}>
+        <ul style={{ padding: "0 20px" }}>
           <LiAbout>
             Explore <SpanAbout>2 days</SpanAbout> of interactive Web3 career
             events
