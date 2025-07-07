@@ -2,7 +2,6 @@ import { useEffect, useState } from "react"
 import { FaApple, FaWindows } from "react-icons/fa6"
 import { styled } from "styled-components"
 import { useAdvancedUserAgentData } from "../../hooks/useAdvancedUserAgentData"
-import { useResizePage } from "../../hooks/useResizePage"
 
 enum DownloadLinks {
   MAC_ARM64 = "https://explorer-artifacts.decentraland.org/launcher-rust/Decentraland_aarch64.dmg",
@@ -22,11 +21,26 @@ const DownloadBtn = ({
   showAvailableOnText = true,
 }: DownloadBtnProps) => {
   const [downloadLink, setDownloadLink] = useState("")
-  const { isMobile } = useResizePage({ size: 568 })
+  const [isMobile, setIsMobile] = useState(false)
   const [isMac, setIsMac] = useState(false)
   const [isWindows, setIsWindows] = useState(false)
   const [isKnownMacArch, setIsKnownMacArch] = useState(true)
   const [isLoadingUserAgentData, userAgentData] = useAdvancedUserAgentData()
+
+  useEffect(() => {
+    const handleResize = () => {
+      const mobileWidth = window.innerWidth <= 568
+      setIsMobile(mobileWidth)
+    }
+
+    window.addEventListener("resize", handleResize)
+    handleResize()
+    getUserAgentData()
+
+    return () => {
+      window.removeEventListener("resize", handleResize)
+    }
+  }, [])
 
   useEffect(() => {
     if (userAgentData) {

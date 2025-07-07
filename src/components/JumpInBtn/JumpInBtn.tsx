@@ -1,9 +1,8 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { FaApple } from "react-icons/fa"
 import { FaWindows } from "react-icons/fa6"
 import { styled } from "styled-components"
 import { useAdvancedUserAgentData } from "../../hooks/useAdvancedUserAgentData"
-import { useResizePage } from "../../hooks/useResizePage"
 import { theme } from "../../utils/theme"
 import { launchDesktopApp } from "../../utils/utils"
 import { DownloadBtn } from "../DownloadBtn/DownloadBtn"
@@ -16,7 +15,7 @@ interface DownloadBtnProps {
 
 const JumpInBtn = ({ className }: DownloadBtnProps) => {
   const [isModalOpen, setIsModalOpen] = useState(false)
-  const { isMobile } = useResizePage({ size: 568 })
+  const [isMobile, setIsMobile] = useState(false)
   const [isLoading, userAgentData] = useAdvancedUserAgentData()
 
   const getButtonText = () => {
@@ -56,6 +55,20 @@ const JumpInBtn = ({ className }: DownloadBtnProps) => {
     if (resp) return
     setIsModalOpen(true)
   }
+
+  useEffect(() => {
+    const handleResize = () => {
+      const mobileWidth = window.innerWidth <= 568
+      setIsMobile(mobileWidth)
+    }
+
+    window.addEventListener("resize", handleResize)
+    handleResize()
+
+    return () => {
+      window.removeEventListener("resize", handleResize)
+    }
+  }, [])
 
   return (
     <>
