@@ -15,6 +15,7 @@ import { Navbar } from "./components/Navbar/Navbar"
 import { Newsletter } from "./components/Newsletter/Newsletter"
 import { Partners } from "./components/Partners/Partners"
 import { Schedule } from "./components/Schedule/Schedule"
+import { VideoSection } from "./components/VideoSection/VideoSection"
 // CSS
 import "./css/global.css"
 import { config } from "./config"
@@ -78,6 +79,8 @@ const App = () => {
         <MarqueeContainerWrapper>
           <Marquee />
         </MarqueeContainerWrapper>
+
+        <VideoSection />
 
         <Partners />
 
