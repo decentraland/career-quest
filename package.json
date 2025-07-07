@@ -27,7 +27,7 @@
   "bugs": {
     "url": "https://github.com/decentraland/career-quest/issues"
   },
-  "homepage": "https://github.com/decentraland/career-quest#readme",
+  "homepage": "",
   "engines": {
     "node": "20.*",
     "npm": "8.* || 9.*"
