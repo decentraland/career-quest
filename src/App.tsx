@@ -1,17 +1,25 @@
 // Styled Components
 import { useEffect, useRef } from "react"
 import Lenis from "lenis"
-import { styled } from "styled-components"
 // Components
 import { About } from "./components/About/About"
+import { Advice } from "./components/Advice/Advice"
+import { Carousel } from "./components/Carousel/Carousel"
+import { ExpertWorkshops } from "./components/ExpertWorshops/ExpertWorkshops"
 import { Faq } from "./components/Faq/Faq"
 import { Footer } from "./components/Footer/Footer"
 import { Hero } from "./components/Hero/Hero"
 import { Marquee } from "./components/Marquee/Marquee"
+import { MarqueeContainerWrapper } from "./components/Marquee/Marquee.styled"
 import { Navbar } from "./components/Navbar/Navbar"
 import { Newsletter } from "./components/Newsletter/Newsletter"
+import { Partners } from "./components/Partners/Partners"
+import { Schedule } from "./components/Schedule/Schedule"
 // CSS
 import "./css/global.css"
+import { config } from "./config"
+import { getAnalytics } from "./modules/analytics/segment"
+import { AppContainer } from "./App.styled"
 
 const App = () => {
   const lenisRef = useRef<Lenis | null>(null)
@@ -39,21 +47,55 @@ const App = () => {
     }
   }, [])
 
+  useEffect(() => {
+    // Initialize analytics after component mounts to avoid race conditions
+    const initializeAnalytics = () => {
+      const analytics = getAnalytics()
+      if (analytics) {
+        analytics.load(config.get("SEGMENT_API_KEY"))
+        analytics.page()
+      }
+    }
+
+    // Small delay to ensure snippet is fully loaded
+    const timer = setTimeout(initializeAnalytics, 0)
+
+    return () => clearTimeout(timer)
+  }, [])
+
   return (
     <div className="app-container">
       <Navbar />
       <AppContainer>
         <Hero />
 
-        <MarqueeWrapper>
-          <Marquee />
-        </MarqueeWrapper>
+        <Carousel />
 
         <About />
 
-        <MarqueeWrapper>
+        <Schedule />
+
+        <MarqueeContainerWrapper>
           <Marquee />
-        </MarqueeWrapper>
+        </MarqueeContainerWrapper>
+
+        <Partners />
+
+        <MarqueeContainerWrapper>
+          <Marquee />
+        </MarqueeContainerWrapper>
+
+        <ExpertWorkshops />
+
+        <MarqueeContainerWrapper>
+          <Marquee />
+        </MarqueeContainerWrapper>
+
+        <Advice />
+
+        <MarqueeContainerWrapper>
+          <Marquee />
+        </MarqueeContainerWrapper>
 
         <Faq />
 
@@ -63,24 +105,5 @@ const App = () => {
     </div>
   )
 }
-
-const AppContainer = styled.div`
-  background-color: #0f1417;
-  color: #ebecfa;
-  position: relative;
-  width: 100%;
-  height: 100%;
-  min-height: calc(100vh - 50px);
-  background-repeat: no-repeat;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  position: relative;
-`
-
-const MarqueeWrapper = styled.div`
-  width: 100%;
-`
 
 export { App }
