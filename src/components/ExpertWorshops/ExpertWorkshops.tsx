@@ -57,12 +57,6 @@ const ExpertWorkshops = () => {
                 <p style={{ marginTop: "30px" }}>{talk.date}</p>
                 <div className="time-card">
                   <p>{talk["time-start"]}</p>
-                  {talk["time-start-p"] && (
-                    <>
-                      <p>|</p>
-                      <p>{talk["time-start-p"]}</p>
-                    </>
-                  )}
                 </div>
                 {talk["date2"] && talk["time-start2"] && (
                   <>
