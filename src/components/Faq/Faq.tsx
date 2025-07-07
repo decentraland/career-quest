@@ -1,16 +1,7 @@
 import { memo, useState } from "react"
+import { styled } from "styled-components"
 import arrowDown from "../../img/icons/arrow-down2.png"
-import {
-  AnswerFaq,
-  ArrowFaq,
-  DivVerticalLineFaq,
-  FaqContainerLeft,
-  FaqContainerRight,
-  QuestionFaq,
-  QuestionFaqContainer,
-  SectionFaqContainer,
-  TitleFaq,
-} from "./Faq.styled"
+import { breakpoints, theme } from "../../utils/theme"
 
 const Faq = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null)
@@ -42,7 +33,8 @@ const Faq = () => {
       question: "How do I access Decentraland Career Quest?",
       answer: () => (
         <p>
-          Decentraland Career Quest happens inside Decentraland. Download the{" "}
+          Decentraland Career Quest will take place in Decentraland. Download
+          the{" "}
           <a
             href="https://decentraland.org/download?utm_org=dcl&utm_source=landing&utm_medium=organic&utm_campaign=careerquest"
             target="_blank"
@@ -50,9 +42,9 @@ const Faq = () => {
           >
             Desktop Client
           </a>{" "}
-          to get started. When Career Quest is live, just click the jump-in link
-          on this page or head to the Career Quest Garden at coordinates 6,88.
-          In the meantime, feel free to explore Genesis Plaza with your avatar!
+          to get started. A jump-in link will appear on this page when Career
+          Quest is taking place, meanwhile feel free to explore Genesis Plaza
+          with your avatar.
         </p>
       ),
     },
@@ -66,6 +58,15 @@ const Faq = () => {
       ),
     },
     {
+      question: "How do I join?",
+      answer: () => (
+        <p>
+          Just create an account and download Decentraland. Once inside, look
+          for the Career Quest hub.
+        </p>
+      ),
+    },
+    {
       question:
         "Do I need cryptocurrency or a digital wallet to use Decentraland?",
       answer: () => (
@@ -74,15 +75,12 @@ const Faq = () => {
           free to explore. If you want to buy a community-made creation from the{" "}
           <a
             href="https://decentraland.org/marketplace/?utm_org=dcl&utm_source=landing&utm_medium=organic&utm_campaign=careerquest"
-            target="_blank"
             rel="noopener noreferrer"
           >
             Marketplace
           </a>
           , you can use a credit/debit card, bank transfer, or a variety of
-          cryptocurrencies. <br />
-          <br />
-          As for a{" "}
+          cryptocurrencies. As for a{" "}
           <a
             href="https://docs.decentraland.org/player/blockchain-integration/get-a-wallet/?utm_org=dcl&utm_source=landing&utm_medium=organic&utm_campaign=careerquest"
             target="_blank"
@@ -111,16 +109,8 @@ const Faq = () => {
           >
             @Decentraland
           </a>{" "}
-          on{" "}
-          <a
-            href="https://decentraland.beehiiv.com/subscribe?utm_org=dcl&utm_source=landing&utm_medium=organic&utm_campaign=careerquest"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            X
-          </a>{" "}
-          and search Decentraland Career Quest for live updates. You can also
-          find Decentraland on{" "}
+          on X.com and search MVFW25 for live updates. You can also find
+          Decentraland on{" "}
           <a
             href="https://www.instagram.com/decentraland_foundation/"
             target="_blank"
@@ -130,7 +120,7 @@ const Faq = () => {
           </a>
           , or{" "}
           <a
-            href="https://decentraland.beehiiv.com/subscribe?utm_org=dcl&utm_source=landing&utm_medium=organic&utm_campaign=careerquest"
+            href="https://decentraland.beehiiv.com/subscribe?utm_org=dcl&utm_source=mvfwlanding&utm_medium=organic&utm_campaign=mvfw25&utm_term=faq&utm_content=newsletter"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -161,32 +151,146 @@ const Faq = () => {
   ]
 
   return (
-    <SectionFaqContainer id="faq">
-      <FaqContainerLeft>
-        <TitleFaq>Frequently Asked Questions</TitleFaq>
-        <DivVerticalLineFaq />
-      </FaqContainerLeft>
-
-      <FaqContainerRight>
+    <SectionContainer id="faq">
+      <LeftContainer>
+        <Title>Frequently Asked Questions</Title>
+      </LeftContainer>
+      <DivVerticalLine />
+      <RightContainer>
         {questions.map((item, index) => (
-          <QuestionFaqContainer key={index}>
-            <QuestionFaq onClick={() => toggleAnswer(index)}>
+          <QuestionContainer key={index}>
+            <Question onClick={() => toggleAnswer(index)}>
               <p>{item.question}</p>
-              <ArrowFaq
+              <Arrow
                 src={arrowDown}
                 alt="arrow"
                 $isActive={activeIndex === index}
               />
-            </QuestionFaq>
-            <AnswerFaq $isActive={activeIndex === index}>
-              {item.answer()}
-            </AnswerFaq>
-          </QuestionFaqContainer>
+            </Question>
+            <Answer $isActive={activeIndex === index}>{item.answer()}</Answer>
+          </QuestionContainer>
         ))}
-      </FaqContainerRight>
-    </SectionFaqContainer>
+      </RightContainer>
+    </SectionContainer>
   )
 }
+
+const SectionContainer = styled.section`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 60px 20px;
+  background-color: ${theme.black};
+
+  @media (min-width: ${breakpoints.md}) {
+    padding: 80px 80px;
+  }
+
+  @media (min-width: ${breakpoints.l}) {
+    flex-direction: row;
+    padding: 100px 100px;
+    gap: 40px;
+  }
+
+  @media (min-width: ${breakpoints.xl}) {
+    padding: 100px 150px;
+  }
+
+  @media (min-width: ${breakpoints.xxl}) {
+    padding: 100px 200px;
+  }
+`
+
+const LeftContainer = styled.div`
+  width: 100%;
+  margin-bottom: 40px;
+
+  @media (min-width: ${breakpoints.l}) {
+    width: 30%;
+    margin-bottom: 0;
+  }
+`
+
+const RightContainer = styled.div`
+  width: 100%;
+  color: ${theme.white};
+
+  @media (min-width: ${breakpoints.l}) {
+    width: 70%;
+  }
+`
+
+const Title = styled.h2`
+  font-size: 40px;
+  font-weight: 900;
+  color: ${theme.white};
+  letter-spacing: 0.1em;
+`
+
+const QuestionContainer = styled.div`
+  border-top: 2px solid ${theme.white};
+  padding: 20px 0;
+
+  &:last-child {
+    border-bottom: 2px solid ${theme.white};
+  }
+`
+
+const Question = styled.div`
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+
+  p {
+    font-size: 24px;
+    font-weight: 700;
+    color: ${theme.white};
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+`
+
+const Answer = styled.div<{ $isActive: boolean }>`
+  max-height: ${(props) => (props.$isActive ? "1000px" : "0")};
+  opacity: ${(props) => (props.$isActive ? "1" : "0")};
+  margin-top: ${(props) => (props.$isActive ? "20px" : "0")};
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+
+  p {
+    font-size: 18px;
+    color: ${theme.white};
+    font-weight: 500;
+  }
+
+  a {
+    text-decoration: underline !important;
+    color: blue;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 1px;
+  }
+`
+
+const Arrow = styled.img<{ $isActive: boolean }>`
+  transition: all 0.3s ease-in-out;
+  height: 24px;
+  transform: ${(props) =>
+    props.$isActive ? "rotate(180deg)" : "rotate(0deg)"};
+`
+
+const DivVerticalLine = styled.div`
+  display: none;
+  width: 2px;
+  background-color: ${theme.white};
+  height: auto;
+  align-self: stretch;
+
+  @media (min-width: ${breakpoints.l}) {
+    display: block;
+  }
+`
 
 memo(Faq)
 export { Faq }
