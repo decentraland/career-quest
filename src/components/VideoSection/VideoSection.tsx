@@ -3,9 +3,10 @@ import { useInView } from "react-intersection-observer"
 import { IoVolumeHigh, IoVolumeMute } from "react-icons/io5"
 import { VideoContainer, VideoSectionContainer } from "./VideoSection.styled"
 
-// Rutas de los videos usando la carpeta public
-const videoDesktopNoText = "/videos/teaser-desktop-no-text.mp4"
-const videoMobile = "/videos/teaser-mobile.mp4"
+// Rutas de los videos usando VITE_BASE_URL
+const baseUrl = import.meta.env.VITE_BASE_URL || ""
+const videoDesktopNoText = `${baseUrl}/videos/teaser-desktop-no-text.mp4`
+const videoMobile = `${baseUrl}/videos/teaser-mobile.mp4`
 
 const VideoSection = () => {
   const [videoElement, setVideoElement] = useState<HTMLVideoElement | null>(
