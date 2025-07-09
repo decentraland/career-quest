@@ -1,5 +1,5 @@
 // Styled Components
-import { useEffect, useRef } from "react"
+import { Suspense, lazy, useEffect, useRef } from "react"
 import Lenis from "lenis"
 // Components
 import { About } from "./components/About/About"
@@ -20,6 +20,33 @@ import "./css/global.css"
 import { config } from "./config"
 import { getAnalytics } from "./modules/analytics/segment"
 import { AppContainer } from "./App.styled"
+
+// Lazy load VideoSection component
+const VideoSection = lazy(() =>
+  import("./components/VideoSection/VideoSection").then((module) => ({
+    default: module.VideoSection,
+  }))
+)
+
+// Loading fallback component
+const VideoSectionLoader = () => {
+  return (
+    <div
+      style={{
+        width: "100%",
+        height: "100vh",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor: "#000",
+        color: "#fff",
+        fontSize: "18px",
+      }}
+    >
+      Cargando video...
+    </div>
+  )
+}
 
 const App = () => {
   const lenisRef = useRef<Lenis | null>(null)
@@ -78,6 +105,10 @@ const App = () => {
         <MarqueeContainerWrapper>
           <Marquee />
         </MarqueeContainerWrapper>
+
+        <Suspense fallback={<VideoSectionLoader />}>
+          <VideoSection />
+        </Suspense>
 
         <Partners />
 

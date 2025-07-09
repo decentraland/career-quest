@@ -14,8 +14,8 @@ export const adviceData = [
     date: "Wed, July 16",
     "time-start": "1:00pm UTC",
     "time-start-p": "6:00am PST",
-    "date2": "Thurs, July 17",
-    "time-start2": "11:00pm UTC | 4:00pm PST"
+    date2: "Thurs, July 17",
+    "time-start2": "11:00pm UTC | 4:00pm PST",
   },
   {
     image: panelFive,
@@ -24,8 +24,8 @@ export const adviceData = [
     date: "Wed, July 16",
     "time-start": "3:00pm UTC",
     "time-start-p": "8:00am PST",
-    "date2": "Thurs, July 17",
-    "time-start2": "1:00am UTC (July 18) | 6:00pm PST (July 17)"
+    date2: "Thurs, July 17",
+    "time-start2": "1:00am UTC (July 18) | 6:00pm PST (July 17)",
   },
   {
     image: panelSix,
@@ -34,8 +34,8 @@ export const adviceData = [
     date: "Wed, July 16",
     "time-start": "11:00pm UTC",
     "time-start-p": "4:00pm PST",
-    "date2": "Thurs, July 17",
-    "time-start2": "1:00pm UTC | 6:00am PST"
+    date2: "Thurs, July 17",
+    "time-start2": "1:00pm UTC | 6:00am PST",
   },
   {
     image: panelSeven,
@@ -43,8 +43,8 @@ export const adviceData = [
     description: "",
     date: "Wed, July 16",
     "time-start": "12:00am (July 17) UTC | 5:00pm (July 16) PST",
-    "date2": "",
-    "time-start2": ""
+    date2: "",
+    "time-start2": "",
   },
   {
     image: panelEight,

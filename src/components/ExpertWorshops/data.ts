@@ -10,8 +10,8 @@ export const expertWorkShopsData = [
     description2: "— With Bondex",
     date: "Wed, July 16",
     "time-start": "12:00pm UTC | 5:00am PST",
-    "date2": "Thurs, July 17",
-    "time-start2": "10:00pm UTC | 3:00pm PST"
+    date2: "Thurs, July 17",
+    "time-start2": "10:00pm UTC | 3:00pm PST",
   },
   {
     image: panelTwo,
@@ -20,8 +20,8 @@ export const expertWorkShopsData = [
     description2: "— With Metana",
     date: "Wed, July 16",
     "time-start": "2:00pm UTC | 7:00am PST",
-    "date2": "Thurs, July 17",
-    "time-start2": "12:00am UTC (July 18) | 5:00pm PST (July 17)"
+    date2: "Thurs, July 17",
+    "time-start2": "12:00am UTC (July 18) | 5:00pm PST (July 17)",
   },
   {
     image: panelThree,
@@ -30,7 +30,7 @@ export const expertWorkShopsData = [
     description2: "— With Serotonin",
     date: "Wed, July 16",
     "time-start": "10:00pm UTC | 3:00pm PST",
-    "date2": "Thurs, July 17",
-    "time-start2": "12:00pm UTC | 5:00am PST"
-  }
+    date2: "Thurs, July 17",
+    "time-start2": "12:00pm UTC | 5:00am PST",
+  },
 ]
