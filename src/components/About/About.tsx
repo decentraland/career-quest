@@ -50,8 +50,15 @@ const About = () => {
           </LiAbout>
 
           <LiAbout>
-            Win <SpanAbout>2 fully-funded</SpanAbout> Web3 bootcamps worth
-            $12,000+
+            Win <SpanAbout>2 fully-funded</SpanAbout>{" "}
+            <a
+              href="https://docs.google.com/forms/d/13UiOdGFnzm0pezEMsZAf0zwxaPHMHqYIba8eCNh8u_4/edit"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Web3 bootcamps
+            </a>{" "}
+            worth $12,000+
           </LiAbout>
         </ul>
       </AboutContainerRight>

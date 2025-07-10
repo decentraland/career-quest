@@ -66,6 +66,14 @@ const LiAbout = styled.li`
   font-weight: 500;
   color: ${theme.white};
   margin-bottom: 5px;
+
+  a {
+    text-decoration: underline !important;
+    font-weight: 500;
+    color: rgb(48, 48, 217);
+    text-underline-offset: 4px;
+    text-decoration-thickness: 1px;
+  }
 `
 
 const SpanAbout = styled.span`
