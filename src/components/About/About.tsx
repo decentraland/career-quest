@@ -45,8 +45,18 @@ const About = () => {
 
           <LiAbout>
             Connect with{" "}
-            <SpanAbout>Bondex, web3.career, Metana and SheFi</SpanAbout> for
-            hiring and training insights
+            <SpanAbout>
+              Bondex,{" "}
+              <a
+                href="https://docs.google.com/forms/d/13UiOdGFnzm0pezEMsZAf0zwxaPHMHqYIba8eCNh8u_4/edit"
+                target="_blank"
+                rel="noreferrer"
+              >
+                web3.career
+              </a>
+              , Metana and SheFi
+            </SpanAbout>{" "}
+            for hiring and training insights
           </LiAbout>
 
           <LiAbout>

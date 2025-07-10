@@ -75,6 +75,13 @@ const SpanAbout = styled.span`
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+
+  a {
+    text-decoration: underline !important;
+    color: rgb(0, 0, 238);
+    text-underline-offset: 4px;
+    text-decoration-thickness: 1px;
+  }
 `
 
 export {
