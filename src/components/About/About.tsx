@@ -45,18 +45,8 @@ const About = () => {
 
           <LiAbout>
             Connect with{" "}
-            <SpanAbout>
-              Bondex,{" "}
-              <a
-                href="https://docs.google.com/forms/d/13UiOdGFnzm0pezEMsZAf0zwxaPHMHqYIba8eCNh8u_4/edit"
-                target="_blank"
-                rel="noreferrer"
-              >
-                web3.career
-              </a>
-              , Metana and SheFi
-            </SpanAbout>{" "}
-            for hiring and training insights
+            <SpanAbout>Bondex, Web3.career, Metana and SheFi</SpanAbout> for
+            hiring and training insights
           </LiAbout>
 
           <LiAbout>
@@ -64,11 +54,11 @@ const About = () => {
             <a
               href="https://docs.google.com/forms/d/13UiOdGFnzm0pezEMsZAf0zwxaPHMHqYIba8eCNh8u_4/edit"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
             >
-              web3.career
+              Web3 bootcamps
             </a>{" "}
-            bootcamps worth $12,000+
+            worth $12,000+
           </LiAbout>
         </ul>
       </AboutContainerRight>
