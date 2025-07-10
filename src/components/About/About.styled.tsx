@@ -78,7 +78,7 @@ const SpanAbout = styled.span`
 
   a {
     text-decoration: underline !important;
-    color: rgb(0, 0, 238);
+    color: rgb(48, 48, 217);
     text-underline-offset: 4px;
     text-decoration-thickness: 1px;
   }
