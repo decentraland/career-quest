@@ -70,7 +70,7 @@ const LiAbout = styled.li`
   a {
     text-decoration: underline !important;
     font-weight: 500;
-    color: rgb(48, 48, 217);
+    color: #3a5aff;
     text-underline-offset: 4px;
     text-decoration-thickness: 1px;
   }
