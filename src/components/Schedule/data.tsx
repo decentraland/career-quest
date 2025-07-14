@@ -38,8 +38,7 @@ const dayOne = [
   {
     dateUTC: "10:00pm UTC",
     datePST: "03:00pm PST",
-    title:
-      "Pitch Yourself in Web3: How to Stand Out to Startups, Protocols & Recruiters",
+    title: "Meet the Teams From web3.career & Decentraland Foundation",
   },
   {
     dateUTC: "11:00pm UTC",
@@ -49,7 +48,8 @@ const dayOne = [
   {
     dateUTC: "Midnight UTC",
     datePST: "05:00pm PST",
-    title: "Meet the Teams From web3.career & Decentraland Foundation",
+    title:
+      "Pitch Yourself in Web3: How to Stand Out to Startups, Protocols & Recruiters",
   },
   {
     dateUTC: "01:00am UTC",
@@ -78,7 +78,7 @@ const dayTwo = [
   {
     dateUTC: "02:00pm UTC",
     datePST: "07:00am PST",
-    title: "Meet the Team From Metana & Decentraland Foundation",
+    title: "Meet the Team From Metana & SheFi",
   },
   {
     dateUTC: "03:00pm UTC",
@@ -94,11 +94,6 @@ const dayTwo = [
     dateUTC: "09:00pm UTC",
     datePST: "02:00pm PST",
     title: "Careers in Virtual Worlds: What I Wish I’d Known",
-  },
-  {
-    dateUTC: "10:00pm UTC",
-    datePST: "03:00pm PST",
-    title: "Web3 Jobs Decoded: Where the Opportunities Are in 2025",
   },
   {
     dateUTC: "11:00pm UTC",
