@@ -38,8 +38,7 @@ const dayOne = [
   {
     dateUTC: "10:00pm UTC",
     datePST: "03:00pm PST",
-    title:
-      "Pitch Yourself in Web3: How to Stand Out to Startups, Protocols & Recruiters",
+    title: "Meet the Teams From web3.career & Decentraland Foundation",
   },
   {
     dateUTC: "11:00pm UTC",
@@ -49,7 +48,8 @@ const dayOne = [
   {
     dateUTC: "Midnight UTC",
     datePST: "05:00pm PST",
-    title: "Meet the Teams From web3.career & Decentraland Foundation",
+    title:
+      "Pitch Yourself in Web3: How to Stand Out to Startups, Protocols & Recruiters",
   },
   {
     dateUTC: "01:00am UTC",
