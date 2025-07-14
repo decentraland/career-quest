@@ -96,11 +96,6 @@ const dayTwo = [
     title: "Careers in Virtual Worlds: What I Wish I’d Known",
   },
   {
-    dateUTC: "10:00pm UTC",
-    datePST: "03:00pm PST",
-    title: "Web3 Jobs Decoded: Where the Opportunities Are in 2025",
-  },
-  {
     dateUTC: "11:00pm UTC",
     datePST: "04:00pm PST",
     title: "Careers in Product Management: What I Wish I’d Known",
