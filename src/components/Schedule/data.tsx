@@ -78,7 +78,7 @@ const dayTwo = [
   {
     dateUTC: "02:00pm UTC",
     datePST: "07:00am PST",
-    title: "Meet the Team From Metana & Shefi",
+    title: "Meet the Team From Metana & SheFi",
   },
   {
     dateUTC: "03:00pm UTC",
