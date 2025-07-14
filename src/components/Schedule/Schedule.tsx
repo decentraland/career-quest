@@ -1,7 +1,8 @@
 import { ScheduleTabs } from "./ScheduleTabs"
 import { useResizePage } from "../../hooks/useResizePage"
 import { DivVerticalLine } from "../../shared/common.styled"
-import { JumpInBtn } from "../JumpInBtn/JumpInBtn"
+import { DownloadBtn } from "../DownloadBtn/DownloadBtn"
+// import { JumpInBtn } from "../JumpInBtn/JumpInBtn"
 import {
   ScheduleContainer,
   ScheduleContainerLeft,
@@ -29,7 +30,8 @@ const Schedule = () => {
             >
               <TitleSchedule>Schedule</TitleSchedule>
 
-              <JumpInBtn />
+              {/* <JumpInBtn /> */}
+              <DownloadBtn showAvailableOnText={false} />
             </div>
 
             <DivVerticalLine />

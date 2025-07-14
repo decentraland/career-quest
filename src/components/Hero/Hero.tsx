@@ -1,6 +1,7 @@
 import { useResizePage } from "../../hooks/useResizePage"
 import careerQuestLogo from "../../img/faq/career-quest-logo.png"
-import { JumpInBtn } from "../JumpInBtn/JumpInBtn"
+import { DownloadBtn } from "../DownloadBtn/DownloadBtn"
+// import { JumpInBtn } from "../JumpInBtn/JumpInBtn"
 import {
   HeroContainer,
   HeroInnerContainer,
@@ -95,7 +96,8 @@ const Hero = () => {
           )}
         </div>
         <div className="hero-bottom">
-          <JumpInBtn />
+          {/* <JumpInBtn /> */}
+          <DownloadBtn showAvailableOnText={false} />
         </div>
       </HeroInnerContainer>
     </HeroContainer>

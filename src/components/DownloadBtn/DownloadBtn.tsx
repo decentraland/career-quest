@@ -3,6 +3,7 @@ import { FaApple, FaWindows } from "react-icons/fa6"
 import { styled } from "styled-components"
 import { useAdvancedUserAgentData } from "../../hooks/useAdvancedUserAgentData"
 import { useResizePage } from "../../hooks/useResizePage"
+import { theme } from "../../utils/theme"
 
 enum DownloadLinks {
   MAC_ARM64 = "https://explorer-artifacts.decentraland.org/launcher-rust/Decentraland_aarch64.dmg",
@@ -195,38 +196,51 @@ const DownloadButtonsContainer = styled.div`
 `
 
 const DownloadButton = styled.a`
-  font-size: 16px;
-  font-weight: 400;
-  color: #ebecfa;
-  background-color: #0f1417;
-  text-decoration: none;
-  border: 2px solid #ebecfa;
+  /* background-color: #0f1417;
   border-radius: 12px;
   padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 400;
+  border: 2px solid #ebecfa;
+  color: #ebecfa;
+  */
+
+  background: linear-gradient(to bottom, ${theme.purple}, ${theme.orange});
+  border-radius: 10px;
+  min-width: 280px;
+  padding: 16px 20px;
+  font-size: 20px;
+  font-weight: 700;
+  border: none;
+  color: ${theme.white};
+
+  text-decoration: none;
   will-change: background-color, color;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 12px;
   margin-bottom: 12px;
-  transition:
+  /* transition:
     background-color 0.3s ease,
-    color 0.3s ease;
+    color 0.3s ease; */
+  transition: opacity 0.3s ease;
 
-  @media screen and (max-width: 568px) {
+  /* @media screen and (max-width: 568px) {
     font-size: 16px;
     padding: 12px 24px;
-  }
+  } */
 
   &:hover {
-    color: #0f1417;
+    opacity: 0.8;
+    /* color: #0f1417;
     background-color: #ebecfa;
 
     svg {
       path {
         fill: #0f1417;
       }
-    }
+    } */
   }
 
   svg {
