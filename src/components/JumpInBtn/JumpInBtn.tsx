@@ -22,7 +22,7 @@ const JumpInBtn = ({ className }: DownloadBtnProps) => {
     }
     const resp = await launchDesktopApp(
       e.currentTarget,
-      "decentraland://?position=144%2C-78"
+      "decentraland://?position=6%2C89"
     )
     if (resp) return
     setIsModalOpen(true)
