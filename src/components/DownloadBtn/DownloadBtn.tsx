@@ -196,22 +196,12 @@ const DownloadButtonsContainer = styled.div`
 `
 
 const DownloadButton = styled.a`
-  /* background-color: #0f1417;
+  background-color: #0f1417;
   border-radius: 12px;
-  padding: 12px 24px;
+  padding: 16px 20px;
   font-size: 16px;
   font-weight: 400;
-  border: 2px solid #ebecfa;
-  color: #ebecfa;
-  */
-
-  background: linear-gradient(to bottom, ${theme.purple}, ${theme.orange});
-  border-radius: 10px;
-  min-width: 280px;
-  padding: 16px 20px;
-  font-size: 20px;
-  font-weight: 700;
-  border: none;
+  border: 2px solid ${theme.white};
   color: ${theme.white};
 
   text-decoration: none;
@@ -221,26 +211,19 @@ const DownloadButton = styled.a`
   justify-content: center;
   gap: 12px;
   margin-bottom: 12px;
-  /* transition:
+  transition:
     background-color 0.3s ease,
-    color 0.3s ease; */
-  transition: opacity 0.3s ease;
-
-  /* @media screen and (max-width: 568px) {
-    font-size: 16px;
-    padding: 12px 24px;
-  } */
+    color 0.3s ease;
 
   &:hover {
-    opacity: 0.8;
-    /* color: #0f1417;
-    background-color: #ebecfa;
+    color: #0f1417;
+    background-color: ${theme.white};
 
     svg {
       path {
         fill: #0f1417;
       }
-    } */
+    }
   }
 
   svg {
@@ -268,13 +251,13 @@ const StyledDownloadBtn = styled(DownloadBtn)`
   .available-on-text {
     font-size: 16px;
     margin-top: 16px;
-    color: #ebecfa;
+    color: ${theme.white};
     text-decoration: none;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 12px;
-    border: 1px solid #ebecfa;
+    border: 1px solid ${theme.white};
   }
 `
 
