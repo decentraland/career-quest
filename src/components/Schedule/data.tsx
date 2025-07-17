@@ -91,9 +91,19 @@ const dayTwo = [
     title: "Web3 Knowledge Tournament",
   },
   {
+    dateUTC: "06:00pm UTC",
+    datePST: "11:00am PST",
+    title: "Career Quest Galà 2025",
+  },
+  {
     dateUTC: "09:00pm UTC",
     datePST: "02:00pm PST",
     title: "Careers in Virtual Worlds: What I Wish I’d Known",
+  },
+  {
+    dateUTC: "10:00pm UTC",
+    datePST: "12:00pm PST",
+    title: "Web3 Jobs Decoded: Where the Opportunities Are in 2025 - Bondex",
   },
   {
     dateUTC: "11:00pm UTC",
